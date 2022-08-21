@@ -12,7 +12,7 @@ const Banner = () => {
               className=" max-w-sm mr-0 lg:mr-16"
               alt=""
             />
-            <div className="text-left pl-24">
+            <div className="text-left px-9 lg:pl-24">
               <h1 className="text-5xl font-bold">DSLR Camera</h1>
               <p className="py-6">
                 Discover a wide range of DSLR Cameras including Canon, Nikon,
@@ -40,7 +40,7 @@ const Banner = () => {
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
-            <div className="text-left ml-24">
+            <div className="text-left px-9 lg:pl-24">
               <h1 className="text-5xl font-bold">Mirrorless Camera</h1>
               <p className="py-6">
                 Welcome to our guide to the best mirrorless cameras you can buy
@@ -68,7 +68,7 @@ const Banner = () => {
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
-            <div className="text-left ml-24">
+            <div className="text-left px-9 lg:pl-24">
               <h1 className="text-5xl font-bold">Polaroid Camera</h1>
               <p className="py-6">
                 Find Best Instant Camera Price In Bangladesh 2022 at Recycle
@@ -96,7 +96,7 @@ const Banner = () => {
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
-            <div className="text-left ml-24">
+            <div className="text-left px-9 lg:pl-24">
               <h1 className="text-5xl font-bold">Movie Camera</h1>
               <p className="py-6">
                 Best cinema cameras in 2022 · 1. Sony FX6 · 2. Canon EOS C300

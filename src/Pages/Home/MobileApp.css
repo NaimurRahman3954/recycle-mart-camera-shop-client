@@ -1,0 +1,38 @@
+ 
+ .mobile-phone {
+   margin: auto;
+   padding: 10px 10px 20px;
+   width: 300px;
+   height: 550px;
+   box-shadow: 0 0 20px #e2e2e2;
+   border-radius: 30px;
+ }
+ 
+ .screen {
+   width: 100%;
+   height: 100%;
+   background: #f2f2f2;
+   border-radius: 20px;
+   overflow-y: auto;
+ }
+ 
+ .brove {
+   width: 150px;
+   height: 20px;
+   background: white;
+   position: absolute;
+   margin: 0 65px;
+   border-radius: 0 0 20px 20px;
+   /* background-color: aqua; */
+ }
+ 
+ .speaker {
+   width: 60px;
+   height: 5px;
+   background: #d2d2d2;
+   display: block;
+   margin: auto;
+   margin-top: 5px;
+   border-radius: 20px;
+ }
+ 

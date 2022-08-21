@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import toast from 'react-hot-toast'
+import { PhotoProvider, PhotoView } from 'react-photo-view'
 import { AuthContext } from '../../Contexts/Usercontext'
+import 'react-photo-view/dist/react-photo-view.css'
 
 const ProductCard = ({ product, setCamera }) => {
   const { user } = useContext(AuthContext)
@@ -54,10 +56,15 @@ const ProductCard = ({ product, setCamera }) => {
     <div>
       <div className="m-5">
         <div className="card w-96 outline outline-1 outline-base-300">
-          <figure className="h-60 m-3">
-            <img src={photo} alt="" width={250} height={250} />
+          <figure className="h-72">
+            <PhotoProvider>
+              <PhotoView src={photo}>
+                {/* <img src={photo} alt="" width={250} height={250} /> */}
+                <img src={photo} className="object-cover w-96 h-72" alt="" />
+              </PhotoView>
+            </PhotoProvider>
           </figure>
-          <div className="card-body bg-blue-50 rounded-b-xl">
+          <div className="card-body bg-base-200 rounded-b-xl">
             <h2 className="card-title">{name}</h2>
             <p className="text-sm text-justify ">Location: {location}</p>
             <p className="text-sm text-justify ">
@@ -85,7 +92,7 @@ const ProductCard = ({ product, setCamera }) => {
             {/* The button to open modal */}
             <label
               onClick={handleAddToWishList}
-              className="btn btn-primary btn-outline flex gap-2"
+              className="btn btn-outline flex gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

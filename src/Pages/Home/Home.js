@@ -4,6 +4,7 @@ import React from 'react'
 import Categories from '../Categories/Categories'
 import Request from './Request'
 import Featured from './Featured'
+import MobileApp from './MobileApp'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <button className="btn btn-primary mb-16">See All →</button>
       </Link>
       <Featured></Featured>
+      <MobileApp></MobileApp>
       <Request></Request>
     </div>
   )

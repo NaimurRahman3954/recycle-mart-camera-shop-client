@@ -5,7 +5,7 @@ const Footer = () => {
   const year = today.getFullYear()
 
   return (
-    <div className="bg-blue-50">
+    <div className="bg-base-200">
       <div className="container mx-auto">
         <footer className="footer p-10 pt-16 text-base-content">
           <div>
