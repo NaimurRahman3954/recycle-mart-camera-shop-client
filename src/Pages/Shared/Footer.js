@@ -10,7 +10,6 @@ const Footer = () => {
         <footer className="footer p-10 pt-16 text-base-content">
           <div>
             <span className="footer-title">Categories</span>
-            <a href="/" className="link link-hover"></a>
             <a href="/" className="link link-hover">
               DSLR Camera
             </a>

@@ -16,9 +16,6 @@ const Request = () => {
             <div className="card-body">
               <h1 className="text-5xl font-bold mb-6">Request a Product</h1>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Name</span>
-                </label>
                 <input
                   type="text"
                   placeholder="name"
@@ -26,9 +23,6 @@ const Request = () => {
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
                 <input
                   type="text"
                   placeholder="email"
@@ -36,11 +30,8 @@ const Request = () => {
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Product</span>
-                </label>
                 <textarea
-                  className="textarea textarea-primary"
+                  className="textarea textarea-primary h-32"
                   placeholder="product details"
                 ></textarea>
               </div>
