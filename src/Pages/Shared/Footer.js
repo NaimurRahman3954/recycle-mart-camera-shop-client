@@ -65,7 +65,7 @@ const Footer = () => {
               <small>Copyright © {year}</small>
             </p>
             <p>
-              <span className="font-bold text-primary">IELTS Mentor</span>
+              <span className="font-bold text-primary">Recycle Mart</span>
               <span className="m-0 lg:ml-2 block lg:inline">
                 Providing quality education for more than 7 years
               </span>
