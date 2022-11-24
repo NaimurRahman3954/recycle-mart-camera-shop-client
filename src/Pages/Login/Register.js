@@ -56,7 +56,7 @@ const Register = () => {
     <div>
       <div className="flex flex-col items-center min-h-screen sm:justify-center sm:pt-0 lg:flex-row gap-16">
         <img
-          src="https://i.ibb.co/LCw229f/Mobile-login-pana-1.png"
+          src="https://i.ibb.co/HTpLrWR/Sign-up-pana.png"
           className="max-w-lg hidden lg:block"
           alt=""
         />

@@ -56,7 +56,7 @@ const Login = () => {
     <div>
       <div className="flex flex-col items-center min-h-screen sm:justify-center sm:pt-0 lg:flex-row gap-16">
         <img
-          src="https://i.ibb.co/nb3sKfX/Login-amico-1.png"
+          src="https://i.ibb.co/p2cjWxx/login.png"
           className="max-w-lg hidden lg:block"
           alt=""
         />

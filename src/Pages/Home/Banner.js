@@ -7,14 +7,12 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/q0p5DQt/1-1.png"
+              src="https://i.ibb.co/GWTgmFT/1-dslr.png"
               className=" max-w-sm mr-0 lg:mr-16"
               alt=""
             />
             <div className="text-left pl-24">
-              <h1 className="text-5xl font-bold">
-                Computer-delivered IELTS Mock Test
-              </h1>
+              <h1 className="text-5xl font-bold">DSLR Camera</h1>
               <p className="py-6">
                 I have developed country's first computer-delivered mock test
                 exactly like British Council so that you can be ready and feel
@@ -36,14 +34,12 @@ const Banner = () => {
         <div id="slide2" className="carousel-item relative w-full">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/w6Fr2VX/2-1.png"
+              src="https://i.ibb.co/mS00TWs/2-mirrorless.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
             <div className="text-left ml-24">
-              <h1 className="text-5xl font-bold">
-                Complete IELTS Preparation Mentorship Program
-              </h1>
+              <h1 className="text-5xl font-bold">Mirrorless Camera</h1>
               <p className="py-6">
                 I will guide you throughout your IELTS journey and help you
                 achieve the best score that will eventually lead you to a
@@ -64,14 +60,12 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/rx9BcwP/3-1.png"
+              src="https://i.ibb.co/DLTWNRx/3-polaroid.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
             <div className="text-left ml-24">
-              <h1 className="text-5xl font-bold">
-                IELTS Listening Preparation Mentorship Program
-              </h1>
+              <h1 className="text-5xl font-bold">Polaroid Camera</h1>
               <p className="py-6">
                 I will guide you for your IELTS listening preparation and help
                 you achieve the best score that will eventually lead you to a
@@ -92,14 +86,12 @@ const Banner = () => {
         <div id="slide4" className="carousel-item relative w-full">
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/7yDf68Y/4-1.png"
+              src="https://i.ibb.co/7JBPLns/4-movie-camera.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
             <div className="text-left ml-24">
-              <h1 className="text-5xl font-bold">
-                IELTS Reading Preparation Mentorship Program
-              </h1>
+              <h1 className="text-5xl font-bold">Movie Camera</h1>
               <p className="py-6">
                 I will guide you for your IELTS reading preparation and help you
                 achieve the best score that will eventually lead you to a
