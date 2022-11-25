@@ -48,12 +48,12 @@ const Router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/categories/:title',
+        path: '/categories/:id',
         element: <Products></Products>,
-        // loader: ({ params }) =>
-        // fetch(),
-        // `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/services/${params.title}`
+        loader: ({ params }) =>
+          fetch(`http://localhost:8000/categories/${params.id}`),
       },
+
       {
         path: '/services/:id/checkout',
         // element: <Checkout></Checkout>,
