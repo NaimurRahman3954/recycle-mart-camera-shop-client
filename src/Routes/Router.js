@@ -2,8 +2,9 @@ import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
 import Main from '../Layout/Main'
 import PageNotFound from '../Pages/404/PageNotFound'
-import AppointmentPage from '../Pages/Appointment/AppointmentPage'
 import Blog from '../Pages/Blog/Blog'
+import Categories from '../Pages/Categories/Categories'
+import Products from '../Pages/Categories/Products'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
 import Register from '../Pages/Login/Register'
@@ -27,8 +28,8 @@ const Router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: '/appointment',
-        element: <AppointmentPage></AppointmentPage>,
+        path: '/categories',
+        element: <Categories></Categories>,
       },
       {
         path: '/services/review',
@@ -47,12 +48,11 @@ const Router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: '/services/:id',
-        // element: <ServiceDetails></ServiceDetails>,
-        loader: ({ params }) =>
-          fetch(
-            `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/services/${params.id}`
-          ),
+        path: '/categories/:title',
+        element: <Products></Products>,
+        // loader: ({ params }) =>
+        // fetch(),
+        // `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/services/${params.title}`
       },
       {
         path: '/services/:id/checkout',

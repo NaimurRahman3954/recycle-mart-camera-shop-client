@@ -1,0 +1,122 @@
+[
+   {
+     "title": "DSLR Camera",
+     "photo": "https://i.ibb.co/GWTgmFT/1-dslr.png",
+     "products": [
+       {
+         "name": "DSLR 1",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Dhanmondi",
+         "resalePrice": 25000,
+         "originalPrice": 47000,
+         "yearsOfUse": 3,
+         "condition": "good",
+         "postTime": "",
+         "sellersName": "Salman Malik",
+         "verified": true
+       },
+       {
+         "name": "DSLR 2",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Kalabagn",
+         "resalePrice": 95000,
+         "originalPrice": 147000,
+         "yearsOfUse": 2,
+           "condition": "excellent",
+         "postTime": "",
+         "sellersName": "Khalid Nafis",
+         "verified": true
+       }
+     ]
+   },
+   {
+     "title": "Mirrorless Camera",
+     "photo": "https://i.ibb.co/mS00TWs/2-mirrorless.png",
+     "products": [
+       {
+         "name": "Mirrorless 1",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Kathalbagn",
+         "resalePrice": 85000,
+         "originalPrice": 157000,
+         "yearsOfUse": 3,
+           "condition": "good",
+         "postTime": "",
+         "sellersName": "Riaj Mahmud",
+         "verified": true
+       },
+       {
+         "name": "Mirrorless 2",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Green Road",
+         "resalePrice": 125000,
+         "originalPrice": 210000,
+         "yearsOfUse": 4,
+           "condition": "fair",
+         "postTime": "",
+         "sellersName": "Riaj Mahmud",
+         "verified": true
+       }
+     ]
+   },
+   {
+     "title": "Polaroid Camera",
+     "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+     "products": [
+       {
+         "name": "Polaroid 1",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Dhanmondi",
+         "resalePrice": 25000,
+         "originalPrice": 47000,
+         "yearsOfUse": 3,
+         "condition": "excellent",
+         "postTime": "",
+         "sellersName": "Salman Malik",
+         "verified": true
+       },
+       {
+         "name": "Polaroid 2",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Kalabagn",
+         "resalePrice": 95000,
+         "originalPrice": 147000,
+         "yearsOfUse": 2,
+           "condition": "excellent",
+         "postTime": "",
+         "sellersName": "Khalid Nafis",
+         "verified": true
+       }
+     ]
+   },
+   {
+     "title": "Movie Camera",
+     "photo": "https://i.ibb.co/7JBPLns/4-movie-camera.png",
+     "products": [
+       {
+         "name": "Red Movie Camera 1",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Dhanmondi",
+         "resalePrice": 25000,
+         "originalPrice": 47000,
+         "yearsOfUse": 3,
+           "condition": "good",
+         "postTime": "",
+         "sellersName": "Salman Malik",
+         "verified": true
+       },
+       {
+         "name": "Da Vinci Movie Camera 2",
+         "photo": "https://i.ibb.co/DLTWNRx/3-polaroid.png",
+         "location": "Kalabagn",
+         "resalePrice": 95000,
+         "originalPrice": 147000,
+         "yearsOfUse": 2,
+           "condition": "excellent",
+         "postTime": "",
+         "sellersName": "Khalid Nafis",
+         "verified": true
+       }
+     ]
+   }
+ ]

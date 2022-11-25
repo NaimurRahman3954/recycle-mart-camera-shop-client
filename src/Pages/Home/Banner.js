@@ -14,9 +14,8 @@ const Banner = () => {
             <div className="text-left pl-24">
               <h1 className="text-5xl font-bold">DSLR Camera</h1>
               <p className="py-6">
-                I have developed country's first computer-delivered mock test
-                exactly like British Council so that you can be ready and feel
-                comfortable in your final text.
+                Discover a wide range of DSLR Cameras including Canon, Nikon,
+                Sony at best price in Bangladesh.
               </p>
               <button className="btn btn-primary">Learn More</button>
             </div>
@@ -41,9 +40,9 @@ const Banner = () => {
             <div className="text-left ml-24">
               <h1 className="text-5xl font-bold">Mirrorless Camera</h1>
               <p className="py-6">
-                I will guide you throughout your IELTS journey and help you
-                achieve the best score that will eventually lead you to a
-                successful career.
+                Welcome to our guide to the best mirrorless cameras you can buy
+                in 2022, including our picks from Canon, Sony, Nikon. Fujifilm
+                and more.
               </p>
               <button className="btn btn-primary">Learn More</button>
             </div>
@@ -67,9 +66,9 @@ const Banner = () => {
             <div className="text-left ml-24">
               <h1 className="text-5xl font-bold">Polaroid Camera</h1>
               <p className="py-6">
-                I will guide you for your IELTS listening preparation and help
-                you achieve the best score that will eventually lead you to a
-                successful career.
+                Find Best Instant Camera Price In Bangladesh 2022 at Recycle
+                Mart. Buy Instant Camera Online with Best Instant Camera at Low
+                Price. ✓EMI Installment.
               </p>
               <button className="btn btn-primary">Learn More</button>
             </div>
@@ -93,9 +92,9 @@ const Banner = () => {
             <div className="text-left ml-24">
               <h1 className="text-5xl font-bold">Movie Camera</h1>
               <p className="py-6">
-                I will guide you for your IELTS reading preparation and help you
-                achieve the best score that will eventually lead you to a
-                successful career.
+                Best cinema cameras in 2022 · 1. Sony FX6 · 2. Canon EOS C300
+                Mark III · 3. Blackmagic Ursa Mini Pro 12K · 4. Blackmagic
+                Design URSA Mini Pro G2
               </p>
               <button className="btn btn-primary">Learn More</button>
             </div>

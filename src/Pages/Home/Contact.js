@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="text-left">
           <div className="card max-w-lg bg-base-100">
             <div className="card-body">
-              <h1 className="text-5xl font-bold mb-6">Seats are Limited!</h1>
+              <h1 className="text-5xl font-bold mb-6">Request Product</h1>
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Name</span>
@@ -36,16 +36,16 @@ const Contact = () => {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Message</span>
+                  <span className="label-text">Product</span>
                 </label>
                 <textarea
                   className="textarea textarea-primary"
-                  placeholder="message"
+                  placeholder="product details"
                 ></textarea>
               </div>
 
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Join Now</button>
+                <button className="btn btn-primary">Request</button>
               </div>
             </div>
           </div>

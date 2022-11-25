@@ -22,7 +22,7 @@ const Header = () => {
         <Link to="/">Home</Link>
       </li>
       <li>
-        <Link to="/appointment" className="justify-between">
+        <Link to="/categories" className="justify-between">
           Categories
         </Link>
       </li>
