@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
+import { Toaster } from 'react-hot-toast'
 import { useLoaderData } from 'react-router-dom'
 import BookingModal from './BookingModal'
 import ProductCard from './ProductCard'
 
 const Products = () => {
   const category = useLoaderData()
-  // const [item, setItem] = useState()
   const [camera, setCamera] = useState(null)
   const { products } = category
   return (
@@ -24,6 +24,7 @@ const Products = () => {
       {camera && (
         <BookingModal camera={camera} setCamera={setCamera}></BookingModal>
       )}
+      <Toaster></Toaster>
     </div>
   )
 }

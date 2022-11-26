@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query'
+// import { useQuery } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
 import CategoryCard from './CategoryCard'
 
@@ -7,6 +7,8 @@ const Categories = () => {
   const [loading, setloading] = useState(true)
 
   // React Query
+  // 📌 facing unusual issue. will look into it later.
+
   // const { data: categories = [] } = useQuery({
   //   queryKey: ['categories'],
   //   queryFn: () =>

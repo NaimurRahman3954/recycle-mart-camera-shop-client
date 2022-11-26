@@ -1,10 +1,14 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
+import DashboardLayout from '../Layout/DashboardLayout'
 import Main from '../Layout/Main'
 import PageNotFound from '../Pages/404/PageNotFound'
 import Blog from '../Pages/Blog/Blog'
 import Categories from '../Pages/Categories/Categories'
 import Products from '../Pages/Categories/Products'
+import Dashboard from '../Pages/Dashboard/Dashboard'
+import MyOrders from '../Pages/Dashboard/MyOrders'
+import MyWishList from '../Pages/Dashboard/MyWishList'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
 import Register from '../Pages/Login/Register'
@@ -77,6 +81,24 @@ const Router = createBrowserRouter([
           fetch(
             `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/reviews/`
           ),
+      },
+    ],
+  },
+  {
+    path: '/dashboard',
+    element: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: '/dashboard',
+        element: <MyOrders></MyOrders>,
+      },
+      {
+        path: '/dashboard/wishlist',
+        element: <MyWishList></MyWishList>,
       },
     ],
   },

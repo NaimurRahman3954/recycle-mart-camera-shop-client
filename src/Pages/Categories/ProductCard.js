@@ -1,8 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import BookingModal from './BookingModal'
+import React, { useContext } from 'react'
+import toast from 'react-hot-toast'
+import { AuthContext } from '../../Contexts/Usercontext'
 
 const ProductCard = ({ product, setCamera }) => {
+  const { user } = useContext(AuthContext)
+  const email = user.email
+
   const {
     name,
     photo,
@@ -17,6 +20,40 @@ const ProductCard = ({ product, setCamera }) => {
   } = product
 
   console.log(product)
+
+  const handleAddToWishList = () => {
+    const wishlist = {
+      product: name,
+      price: resalePrice,
+      originalPrice,
+      condition,
+      email,
+      location,
+    }
+
+    fetch('http://localhost:8000/wishlists', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(wishlist),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        if (data.acknowledged) {
+          // setCamera(null)
+          toast.success('Added to the wishlists')
+          // refetch()
+        } else {
+          toast.error(data.message)
+        }
+      })
+
+    // TODO: send data to the server
+    // and once data is saved then close the modal
+    // and display success toast
+  }
 
   return (
     <div>
@@ -52,9 +89,15 @@ const ProductCard = ({ product, setCamera }) => {
 
             {/* The button to open modal */}
             <label
+              onClick={handleAddToWishList}
+              className="btn btn-primary btn-outline flex"
+            >
+              Add to Wishlist
+            </label>
+            <label
               htmlFor="product-modal"
               onClick={() => setCamera(product)}
-              className="btn btn-primary btn-outline flex"
+              className="btn btn-primary flex"
             >
               Book Now
             </label>

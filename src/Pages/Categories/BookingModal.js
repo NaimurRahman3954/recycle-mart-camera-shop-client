@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
 import { AuthContext } from '../../Contexts/Usercontext'
 
 const BookingModal = ({ camera, setCamera }) => {
   const { user } = useContext(AuthContext)
   const { name, resalePrice } = camera
-  //   console.log(name, resalePrice)
 
   const handleBooking = (event) => {
     event.preventDefault()
@@ -12,26 +12,39 @@ const BookingModal = ({ camera, setCamera }) => {
     const buyer = form.name.value
     const email = form.email.value
     const phone = form.phone.value
-    const location = form.location.value
+    const meetingLocation = form.location.value
 
     const booking = {
-      // meetingDate: date,
-      // product: name,
+      product: name,
+      price: resalePrice,
       buyer: buyer,
       email,
       phone,
-      location,
+      meetingLocation,
     }
 
-    console.log(booking)
-
-    setCamera(null)
+    fetch('http://localhost:8000/bookings', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(booking),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        if (data.acknowledged) {
+          setCamera(null)
+          toast.success('Booking confirmed')
+          // refetch()
+        } else {
+          toast.error(data.message)
+        }
+      })
 
     // TODO: send data to the server
     // and once data is saved then close the modal
     // and display success toast
-
-    // 📌📌 step-15.3: [closing modal] reset setTreatment state to null onSubmit
   }
 
   return (
@@ -50,7 +63,6 @@ const BookingModal = ({ camera, setCamera }) => {
             ৳ {resalePrice}
           </div>
           <form
-            // 📌📌 step-12.1: event handler
             onSubmit={handleBooking}
             className="grid grid-cols-1 gap-3 mt-10"
           >
