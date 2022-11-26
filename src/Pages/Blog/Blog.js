@@ -8,7 +8,7 @@ const Blog = () => {
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
           <div className="flex items-center justify-between">
             <span className="text-sm dark:text-gray-600">Nov 24, 2022</span>
-            <button className="font-bold rounded btn-warning px-3 py-1 my-2">
+            <button className="font-bold rounded btn-error px-3 py-1 my-2">
               React
             </button>
           </div>
@@ -32,7 +32,7 @@ const Blog = () => {
           <div className="flex items-center justify-between mt-4">
             <a
               href="https://blog.saeloun.com/2021/11/11/8-ways-to-handle-react-state-part1.html"
-              className="hover:underline text-purple-600"
+              className="hover:underline text-blue-700"
             >
               Read more →
             </a>
@@ -44,7 +44,7 @@ const Blog = () => {
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
           <div className="flex items-center justify-between">
             <span className="text-sm dark:text-gray-600">Nov 24, 2022</span>
-            <button className="font-bold rounded btn-warning px-3 py-1 my-2">
+            <button className="font-bold rounded btn-error px-3 py-1 my-2">
               Javascript
             </button>
           </div>
@@ -66,7 +66,7 @@ const Blog = () => {
           <div className="flex items-center justify-between mt-4">
             <a
               href="https://www.geeksforgeeks.org/prototypal-inheritance-using-__proto__-in-javascript/"
-              className="hover:underline text-purple-600"
+              className="hover:underline text-blue-700"
             >
               Read more →
             </a>
@@ -78,7 +78,7 @@ const Blog = () => {
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
           <div className="flex items-center justify-between">
             <span className="text-sm dark:text-gray-600">Nov 24, 2022</span>
-            <button className="font-bold rounded btn-warning px-3 py-1 my-2">
+            <button className="font-bold rounded btn-error px-3 py-1 my-2">
               Debugging
             </button>
           </div>
@@ -106,7 +106,7 @@ const Blog = () => {
           <div className="flex items-center justify-between mt-4">
             <a
               href="https://moduscreate.com/blog/heres-why-you-should-write-unit-tests/"
-              className="hover:underline text-purple-600"
+              className="hover:underline text-blue-700"
             >
               Read more →
             </a>
@@ -118,7 +118,7 @@ const Blog = () => {
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
           <div className="flex items-center justify-between">
             <span className="text-sm dark:text-gray-600">Nov 24, 2022</span>
-            <button className="font-bold rounded btn-warning px-3 py-1 my-2">
+            <button className="font-bold rounded btn-error px-3 py-1 my-2">
               Server
             </button>
           </div>
@@ -141,7 +141,7 @@ const Blog = () => {
           <div className="flex items-center justify-between mt-4">
             <a
               href="https://www.codeinwp.com/blog/angular-vs-vue-vs-react/"
-              className="hover:underline text-purple-600"
+              className="hover:underline text-blue-700"
             >
               Read more →
             </a>

@@ -32,7 +32,7 @@ const MyWishList = () => {
               <th>Original Price</th>
               <th>Condition</th>
               <th>Location</th>
-              {/* <th>Time</th> */}
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -40,10 +40,11 @@ const MyWishList = () => {
               <tr key={wishlist._id}>
                 <th>{i + 1}</th>
                 <td>{wishlist.product}</td>
-                <td>{wishlist.price}</td>
-                <td>{wishlist.originalPrice}</td>
+                <td>৳ {wishlist.price}</td>
+                <td>৳ {wishlist.originalPrice}</td>
                 <td>{wishlist.condition}</td>
                 <td>{wishlist.location}</td>
+                <td></td>
               </tr>
             ))}
           </tbody>

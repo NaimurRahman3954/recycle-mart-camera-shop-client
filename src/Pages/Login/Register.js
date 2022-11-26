@@ -32,7 +32,7 @@ const Register = () => {
         setSuccess(true)
         form.reset()
         updateUser(name, photoURL)
-        navigate('/')
+        saveUser(name, email)
       })
       .catch((error) => {
         // const errorCode = error.code
@@ -50,6 +50,22 @@ const Register = () => {
         console.log('photoURL updated')
       })
       .catch((error) => console.error(error))
+  }
+
+  const saveUser = (name, email) => {
+    const user = { name, email }
+    fetch('http://localhost:8000/users', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        navigate('/')
+      })
   }
 
   return (

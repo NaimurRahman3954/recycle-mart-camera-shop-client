@@ -5,9 +5,9 @@ const CategoryCard = (props) => {
   const { _id, title, photo, products } = props.category
   return (
     <div>
-      <div className="m-5">
+      <div className="m-5 w-80">
         <div className="card outline outline-1 outline-base-300">
-          <figure className="h-60 m-3">
+          <figure className="h-72 m-3">
             <img src={photo} alt="" width={250} height={250} />
           </figure>
           <div className="card-body bg-base-200">

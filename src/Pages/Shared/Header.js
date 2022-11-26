@@ -51,7 +51,7 @@ const Header = () => {
       {/* Buyer or Seller */}
 
       <div className="grid place-items-start lg:place-items-center mb-2 lg:mb-0">
-        <select className="select select-bordered select-sm bg-base-200 mx-2 mr-4">
+        <select className="select select-bordered select-sm mx-2 mr-4">
           <option selected>Buyer</option>
           <option>Seller</option>
         </select>
@@ -60,7 +60,7 @@ const Header = () => {
   )
 
   return (
-    <div className=" bg-base-200 mx-auto py-2">
+    <div className=" mx-auto py-2">
       <div className="navbar container mx-auto">
         <div className="navbar-start">
           <Link

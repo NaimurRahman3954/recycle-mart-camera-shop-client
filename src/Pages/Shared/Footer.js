@@ -6,9 +6,9 @@ const Footer = () => {
   const year = today.getFullYear()
 
   return (
-    <div className="bg-base-200">
+    <div className="bg-blue-50">
       <div className="container mx-auto">
-        <footer className="footer p-10 pt-16 bg-base-200 text-base-content">
+        <footer className="footer p-10 pt-16 text-base-content">
           <div>
             <span className="footer-title">Services</span>
             <a href="/" className="link link-hover">
@@ -58,7 +58,7 @@ const Footer = () => {
             </a>
           </div>
         </footer>
-        <footer className="footer px-10 py-8 border-t bg-base-200 text-base-content border-base-300">
+        <footer className="footer px-10 py-8 border-t border-y-gray-300 text-base-content border-base-300">
           <div className="items-center">
             {/* // dynamic date 🔥🔥🔥 */}
             <p>

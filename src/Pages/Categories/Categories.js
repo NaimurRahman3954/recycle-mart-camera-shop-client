@@ -33,7 +33,7 @@ const Categories = () => {
         {loading ? (
           <button className="btn loading bg-primary my-16">loading</button>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 align-middle justify-center">
+          <div className="flex flex-wrap align-middle justify-center">
             {categories.map((category) => (
               <CategoryCard
                 key={category._id}

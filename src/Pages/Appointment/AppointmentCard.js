@@ -6,7 +6,7 @@ const AppointmentCard = ({ appointment, setTreatment }) => {
   return (
     <div>
       <div>
-        <div className="card bg-base-200">
+        <div className="card bg-blue-100">
           <div className="card-body text-center">
             <h2 className="text-2xl text-secondary font-bold text-center">
               {name}

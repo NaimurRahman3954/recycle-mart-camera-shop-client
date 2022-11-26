@@ -30,7 +30,7 @@ const MyOrders = () => {
               <th>Product</th>
               <th>Price</th>
               <th>Meeting Location</th>
-              {/* <th>Time</th> */}
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -38,8 +38,9 @@ const MyOrders = () => {
               <tr key={booking._id}>
                 <th>{i + 1}</th>
                 <td>{booking.product}</td>
-                <td>{booking.price}</td>
+                <td>৳ {booking.price}</td>
                 <td>{booking.meetingLocation}</td>
+                <td></td>
               </tr>
             ))}
           </tbody>

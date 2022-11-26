@@ -4,6 +4,7 @@ import { AuthContext } from '../Contexts/Usercontext'
 
 // import useAdmin from '../hooks/useAdmin'
 import Header from '../Pages/Shared/Header'
+import Footer from '../Pages/Shared/Footer'
 
 const DashboardLayout = () => {
   const { user } = useContext(AuthContext)
@@ -22,7 +23,7 @@ const DashboardLayout = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 bg-base-100 text-base-content">
+          <ul className="menu p-4 mr-6 mb-6 w-60 bg-base-200 text-base-content text-center rounded-lg">
             <li>
               <Link to="/dashboard">My Orders</Link>
             </li>
@@ -39,6 +40,7 @@ const DashboardLayout = () => {
           </ul>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   )
 }
