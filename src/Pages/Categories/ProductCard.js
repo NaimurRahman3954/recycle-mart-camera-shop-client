@@ -4,7 +4,7 @@ import { AuthContext } from '../../Contexts/Usercontext'
 
 const ProductCard = ({ product, setCamera }) => {
   const { user } = useContext(AuthContext)
-  const email = user.email
+  const email = user?.email
 
   const {
     name,
@@ -76,7 +76,7 @@ const ProductCard = ({ product, setCamera }) => {
               <div className={verified === false ? 'hidden' : 'block'}>
                 <input
                   type="checkbox"
-                  checked
+                  defaultChecked
                   className="checkbox checkbox-xs checkbox-primary checked disabled ml-1"
                 />
               </div>

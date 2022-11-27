@@ -5,10 +5,11 @@ import { AuthContext } from '../Contexts/Usercontext'
 // import useAdmin from '../hooks/useAdmin'
 import Header from '../Pages/Shared/Header'
 import Footer from '../Pages/Shared/Footer'
+import useAdmin from '../hooks/useAdmin'
 
 const DashboardLayout = () => {
   const { user } = useContext(AuthContext)
-  //   const [isAdmin] = useAdmin(user?.email)
+  const [isAdmin] = useAdmin(user?.email)
   return (
     <div>
       <Header></Header>
@@ -18,7 +19,7 @@ const DashboardLayout = () => {
           type="checkbox"
           className="drawer-toggle"
         />
-        <div className="drawer-content">
+        <div className="drawer-content mb-6">
           <Outlet></Outlet>
         </div>
         <div className="drawer-side">
@@ -30,13 +31,13 @@ const DashboardLayout = () => {
             <li>
               <Link to="/dashboard/wishlist">My Wishlist</Link>
             </li>
-            {/* {isAdmin && ( */}
-            <>
-              <li>
-                <Link to="/dashboard/allusers">All Users</Link>
-              </li>
-            </>
-            {/* )} */}
+            {isAdmin && (
+              <>
+                <li>
+                  <Link to="/dashboard/allusers">All Users</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

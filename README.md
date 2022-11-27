@@ -28,3 +28,8 @@ Watch the [Live Site](https://ielts-mentor-9c05a.web.app/).
 ## Technology used
 
 `React`, `Javascript`, `Tailwind CSS`, `DaisyUI`, `Firebase`, `Node`, `Express`, `MongoDB`, `Vercel`
+
+## Admin Credentials
+
+adminEmail: naimurrahman@gmail.com <br>
+adminPassword: admin@naim

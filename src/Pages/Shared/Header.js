@@ -52,7 +52,7 @@ const Header = () => {
 
       <div className="grid place-items-start lg:place-items-center mb-2 lg:mb-0">
         <select className="select select-bordered select-sm mx-2 mr-4">
-          <option selected>Buyer</option>
+          <option defaultValue>Buyer</option>
           <option>Seller</option>
         </select>
       </div>

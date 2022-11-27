@@ -1,13 +1,26 @@
 import React, { useContext } from 'react'
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
+import useToken from '../../hooks/useToken'
 
 const Login = () => {
   const [passwordError, setPasswordError] = useState('')
   const [success, setSuccess] = useState(false)
   const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext)
+  const [loginUserEmail, setLoginUserEmail] = useState('')
+
+  const location = useLocation()
   const navigate = useNavigate()
+
+  const [token] = useToken(loginUserEmail)
+
+  const from = location.state?.from?.pathname || '/'
+
+  if (token) {
+    navigate(from, { replace: true })
+  }
+
   const handleFormSubmit = (event) => {
     event.preventDefault()
     setSuccess(false)
@@ -18,14 +31,12 @@ const Login = () => {
     signIn(email, password)
       .then((result) => {
         const user = result.user
-        console.log(user)
         setSuccess(true)
         form.reset()
-        navigate('/')
+        navigate(from, { replace: true })
+        loginUserEmail(email)
       })
       .catch((error) => {
-        // const errorCode = error.code
-        // const errorMessage = error.message
         setPasswordError(error.message)
       })
   }
@@ -34,8 +45,9 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         const user = result.user
-        console.log(user)
+        console.log('Google user', user)
         navigate('/')
+        // loginUserEmail(user.email)
       })
       .catch((error) => {
         console.error(error)
@@ -46,8 +58,8 @@ const Login = () => {
     githubSignIn()
       .then((result) => {
         const user = result.user
-        console.log(user)
         navigate('/')
+        // loginUserEmail(email)
       })
       .catch((error) => {})
   }

@@ -6,12 +6,14 @@ import PageNotFound from '../Pages/404/PageNotFound'
 import Blog from '../Pages/Blog/Blog'
 import Categories from '../Pages/Categories/Categories'
 import Products from '../Pages/Categories/Products'
+import AllUsers from '../Pages/Dashboard/AllUsers'
 import Dashboard from '../Pages/Dashboard/Dashboard'
 import MyOrders from '../Pages/Dashboard/MyOrders'
 import MyWishList from '../Pages/Dashboard/MyWishList'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
 import Register from '../Pages/Login/Register'
+import AdminRoute from './AdminRoute'
 import PrivateRoute from './PrivateRoute'
 
 const Router = createBrowserRouter([
@@ -99,6 +101,14 @@ const Router = createBrowserRouter([
       {
         path: '/dashboard/wishlist',
         element: <MyWishList></MyWishList>,
+      },
+      {
+        path: '/dashboard/allusers',
+        element: (
+          <AdminRoute>
+            <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
       },
     ],
   },

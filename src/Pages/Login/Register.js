@@ -1,18 +1,28 @@
-import { getAuth, updateProfile } from 'firebase/auth'
 import React from 'react'
+import { getAuth, updateProfile } from 'firebase/auth'
 import { useState } from 'react'
 import { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
 import app from '../../Firebase/firebase.init'
+import useToken from '../../hooks/useToken'
 
 const auth = getAuth(app)
 
 const Register = () => {
   const [passwordError, setPasswordError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [createdUserEmail, setCreatedUserEmail] = useState('')
   const { createUser } = useContext(AuthContext)
+
+  const [token] = useToken(createdUserEmail)
   const navigate = useNavigate()
+
+  if (token) {
+    // console.log('navigation test')
+    navigate('/')
+  }
+
   const handleRegister = (event) => {
     event.preventDefault()
     setSuccess(false)
@@ -35,8 +45,6 @@ const Register = () => {
         saveUser(name, email)
       })
       .catch((error) => {
-        // const errorCode = error.code
-        // const errorMessage = error.message
         setPasswordError(error.message)
       })
   }
@@ -63,10 +71,21 @@ const Register = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        setCreatedUserEmail(email)
         navigate('/')
       })
   }
+
+  // const getUserToken = (email) => {
+  //   fetch(`http://localhost:8000/jwt?email=${email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data.accessToken) {
+  //         localStorage.setItem('accessToken', data.accessToken)
+  //         navigate('/')
+  //       }
+  //     })
+  // }
 
   return (
     <div>

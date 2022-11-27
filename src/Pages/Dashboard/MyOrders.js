@@ -15,6 +15,7 @@ const MyOrders = () => {
           authorization: `bearer ${localStorage.getItem('accessToken')}`,
         },
       })
+      // const res = await fetch(url)
       const data = await res.json()
       return data
     },
@@ -34,15 +35,16 @@ const MyOrders = () => {
             </tr>
           </thead>
           <tbody>
-            {bookings.map((booking, i) => (
-              <tr key={booking._id}>
-                <th>{i + 1}</th>
-                <td>{booking.product}</td>
-                <td>৳ {booking.price}</td>
-                <td>{booking.meetingLocation}</td>
-                <td></td>
-              </tr>
-            ))}
+            {bookings.length &&
+              bookings?.map((booking, i) => (
+                <tr key={booking._id}>
+                  <th>{i + 1}</th>
+                  <td>{booking.product}</td>
+                  <td>৳ {booking.price}</td>
+                  <td>{booking.meetingLocation}</td>
+                  <td></td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>

@@ -1,25 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const CategoryCard = (props) => {
+const CategoryHomeCard = (props) => {
   const { _id, title, photo, products } = props.category
   return (
     <div>
-      <div className="m-5 w-96">
-        <div className="card card-side outline outline-1 outline-base-300">
-          <figure className="w-28 m-3">
-            <img src={photo} alt="" width={50} height={50} />
+      <div className="m-5 w-80">
+        <div className="card outline outline-1 outline-base-300">
+          <figure className="h-72 m-3">
+            <img src={photo} alt="" width={250} height={250} />
           </figure>
-          <div className="card-body bg-blue-50">
+          <div className="card-body bg-base-200">
             <h2 className="card-title">{title}</h2>
             <div className="card-actions justify-start">
-              <div className="badge badge-outline badge-error">
+              <div className="badge badge-outline">
                 {products.length} products available
               </div>
             </div>
-            <div className="card-actions justify-start w-full mt-3">
+            <div className="card-actions justify-start w-full mt-6">
               <Link to={`/categories/${_id}`}>
-                <button className="btn btn-outline btn-md btn-primary">
+                <button className="btn btn-outline btn-primary">
                   Explore →
                 </button>
               </Link>
@@ -31,4 +31,4 @@ const CategoryCard = (props) => {
   )
 }
 
-export default CategoryCard
+export default CategoryHomeCard
