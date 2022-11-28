@@ -20,14 +20,14 @@ const Blog = () => {
             <p className="mt-2 text-justify">
               In React apps, there are at least seven ways to handle the state.
               Let us briefly explore a few of them in this part.
-              <ol className="list-decimal pl-9 pt-2">
-                <li>URL</li>
-                <li>Web Storage</li>
-                <li>Local State</li>
-                <li>Lifted State</li>
-                <li>Derived State</li>
-              </ol>
             </p>
+            <ol className="list-decimal pl-9 pt-2">
+              <li>URL</li>
+              <li>Web Storage</li>
+              <li>Local State</li>
+              <li>Lifted State</li>
+              <li>Derived State</li>
+            </ol>
           </div>
           <div className="flex items-center justify-between mt-4">
             <a

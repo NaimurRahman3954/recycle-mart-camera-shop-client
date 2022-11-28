@@ -8,10 +8,10 @@ import Categories from '../Pages/Categories/Categories'
 import Products from '../Pages/Categories/Products'
 import AddProduct from '../Pages/Dashboard/AddProduct'
 import AllUsers from '../Pages/Dashboard/AllUsers'
-import Dashboard from '../Pages/Dashboard/Dashboard'
 import MyOrders from '../Pages/Dashboard/MyOrders'
 import MyProducts from '../Pages/Dashboard/MyProducts'
 import MyWishList from '../Pages/Dashboard/MyWishList'
+import Payment from '../Pages/Dashboard/Payment'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
 import Register from '../Pages/Login/Register'
@@ -26,10 +26,7 @@ const Router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () =>
-          fetch(
-            'https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/services'
-          ),
+        loader: () => fetch(''),
       },
       {
         path: '/home',
@@ -60,31 +57,6 @@ const Router = createBrowserRouter([
         element: <Products></Products>,
         loader: ({ params }) =>
           fetch(`http://localhost:8000/categories/${params.id}`),
-      },
-
-      {
-        path: '/services/:id/checkout',
-        // element: <Checkout></Checkout>,
-        loader: ({ params }) =>
-          fetch(
-            `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/services/${params.id}`
-          ),
-      },
-      {
-        path: '/myreviews/',
-        element: <PrivateRoute>{/* <MyReviews></MyReviews> */}</PrivateRoute>,
-        loader: ({ params }) =>
-          fetch(
-            `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/reviews/`
-          ),
-      },
-      {
-        path: '/addservice/',
-        element: <PrivateRoute>{/* <AddService></AddService> */}</PrivateRoute>,
-        loader: ({ params }) =>
-          fetch(
-            `https://b6a11-service-review-server-side-naimur-rahman3954.vercel.app/reviews/`
-          ),
       },
     ],
   },
@@ -127,6 +99,12 @@ const Router = createBrowserRouter([
             <MyProducts></MyProducts>
           </AdminRoute>
         ),
+      },
+      {
+        path: '/dashboard/payment/:id',
+        element: <Payment></Payment>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:8000/bookings/${params.id}`),
       },
     ],
   },

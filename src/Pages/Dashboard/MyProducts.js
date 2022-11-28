@@ -65,29 +65,30 @@ const MyProducts = () => {
             </tr>
           </thead>
           <tbody>
-            {products?.map((product, i) => (
-              <tr key={product._id}>
-                <th>{i + 1}</th>
-                <td>
-                  <div className="avatar">
-                    <div className="w-16 rounded-full">
-                      <img src={product.photo} alt="product_photo" />
+            {products.length &&
+              products?.map((product, i) => (
+                <tr key={product._id}>
+                  <th>{i + 1}</th>
+                  <td>
+                    <div className="avatar">
+                      <div className="w-16 rounded-full">
+                        <img src={product.photo} alt="product_photo" />
+                      </div>
                     </div>
-                  </div>
-                </td>
-                <td>{product.name}</td>
-                <td>৳ {product.resalePrice}</td>
-                <td>
-                  <label
-                    onClick={() => setDeletingProduct(product)}
-                    htmlFor="confirmation-modal"
-                    className="btn btn-sm btn-error"
-                  >
-                    Delete
-                  </label>
-                </td>
-              </tr>
-            ))}
+                  </td>
+                  <td>{product.name}</td>
+                  <td>৳ {product.resalePrice}</td>
+                  <td>
+                    <label
+                      onClick={() => setDeletingProduct(product)}
+                      htmlFor="confirmation-modal"
+                      className="btn btn-sm btn-error"
+                    >
+                      Delete
+                    </label>
+                  </td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
