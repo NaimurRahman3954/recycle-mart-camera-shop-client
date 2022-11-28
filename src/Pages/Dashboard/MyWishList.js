@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
 import React, { useContext } from 'react'
+import toast from 'react-hot-toast'
 import { AuthContext } from '../../Contexts/Usercontext'
 
 const MyWishList = () => {
@@ -7,7 +8,7 @@ const MyWishList = () => {
 
   const url = `http://localhost:8000/wishlists?email=${user?.email}`
 
-  const { data: wishlists = [] } = useQuery({
+  const { data: wishlists = [], refetch } = useQuery({
     queryKey: ['wishlists', user?.email],
     queryFn: async () => {
       const res = await fetch(url, {
@@ -19,6 +20,24 @@ const MyWishList = () => {
       return data
     },
   })
+
+  const handleBookNow = (id) => {
+    fetch(`http://localhost:8000/bookings/${id}`, {
+      method: 'PUT',
+      headers: {
+        authorization: `bearer ${localStorage.getItem('accessToken')}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        //   console.log('made admin', data)
+        if (data.modifiedCount > 0) {
+          toast.success('Booking successful.')
+          refetch()
+        }
+      })
+  }
+
   return (
     <div>
       <h1 className="text-5xl font-bold mt-12 text-center">My Wishlist</h1>
@@ -32,7 +51,7 @@ const MyWishList = () => {
               <th>Original Price</th>
               <th>Condition</th>
               <th>Location</th>
-              <th></th>
+              <th>Book</th>
             </tr>
           </thead>
           <tbody>
@@ -44,7 +63,14 @@ const MyWishList = () => {
                 <td>৳ {wishlist.originalPrice}</td>
                 <td>{wishlist.condition}</td>
                 <td>{wishlist.location}</td>
-                <td></td>
+                <td>
+                  <button
+                    onClick={() => handleBookNow(wishlist._id)}
+                    className="btn btn-xs btn-success"
+                  >
+                    Book Now
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>

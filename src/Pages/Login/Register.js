@@ -31,6 +31,7 @@ const Register = () => {
     const name = form.name.value
     const photoURL = form.photoURL.value
     const email = form.email.value
+    const role = form.role.value
     const password = form.password.value
 
     setPasswordError('')
@@ -42,7 +43,7 @@ const Register = () => {
         setSuccess(true)
         form.reset()
         updateUser(name, photoURL)
-        saveUser(name, email)
+        saveUser(name, email, role)
       })
       .catch((error) => {
         setPasswordError(error.message)
@@ -60,8 +61,9 @@ const Register = () => {
       .catch((error) => console.error(error))
   }
 
-  const saveUser = (name, email) => {
-    const user = { name, email }
+  const saveUser = (name, email, role) => {
+    const user = { name, email, role }
+    console.log(user)
     fetch('http://localhost:8000/users', {
       method: 'POST',
       headers: {
@@ -127,9 +129,28 @@ const Register = () => {
                   type="url"
                   name="photoURL"
                   placeholder="photo URL"
-                  required
+                  defaultValue="https://i.ibb.co/qd40KmP/avatardefault-92824.webp"
+                  // required
                   className="block w-full mt-1 p-1 px-3 rounded-md input input-bordered focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 />
+              </div>
+            </div>
+            <div className="mt-4">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-gray-600 undefined"
+              >
+                Role
+              </label>
+              <div className="flex flex-col items-start">
+                <select
+                  name="role"
+                  id=""
+                  className="block w-full mt-1 p-1 px-1 rounded-md input input-bordered focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                >
+                  <option defaultValue="buyer">Buyer</option>
+                  <option value="seller">Seller</option>
+                </select>
               </div>
             </div>
             <div className="mt-4">

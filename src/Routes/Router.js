@@ -6,9 +6,11 @@ import PageNotFound from '../Pages/404/PageNotFound'
 import Blog from '../Pages/Blog/Blog'
 import Categories from '../Pages/Categories/Categories'
 import Products from '../Pages/Categories/Products'
+import AddProduct from '../Pages/Dashboard/AddProduct'
 import AllUsers from '../Pages/Dashboard/AllUsers'
 import Dashboard from '../Pages/Dashboard/Dashboard'
 import MyOrders from '../Pages/Dashboard/MyOrders'
+import MyProducts from '../Pages/Dashboard/MyProducts'
 import MyWishList from '../Pages/Dashboard/MyWishList'
 import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
@@ -107,6 +109,22 @@ const Router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: '/dashboard/addproduct',
+        element: (
+          <AdminRoute>
+            <AddProduct></AddProduct>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: '/dashboard/myproducts',
+        element: (
+          <AdminRoute>
+            <MyProducts></MyProducts>
           </AdminRoute>
         ),
       },

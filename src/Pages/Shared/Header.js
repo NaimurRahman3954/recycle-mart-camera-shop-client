@@ -34,17 +34,6 @@ const Header = () => {
 
   const privateMenuItems = (
     <>
-      {/* <li>
-        <Link to="/myorders">My Orders</Link>
-      </li>
-      <li>
-        <Link to="/wishlist">Wishlist</Link>
-      </li> */}
-      <li>
-        <Link to="/addproduct" className="justify-between">
-          Add a Product
-        </Link>
-      </li>
       <li>
         <Link to="/dashboard">Dashboard</Link>
       </li>
@@ -74,7 +63,7 @@ const Header = () => {
           className={
             user === null
               ? 'navbar-center hidden lg:flex'
-              : 'navbar hidden lg:flex'
+              : 'navbar-center hidden lg:flex'
           }
         >
           <ul className="menu menu-horizontal p-0">{menuItems}</ul>
