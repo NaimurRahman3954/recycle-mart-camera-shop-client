@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
@@ -32,7 +32,6 @@ const MyWishList = () => {
       price: price,
       photo: photo,
       email: user.email,
-      // phone,
       meetingLocation: location,
       paid: false,
     }
@@ -45,10 +44,8 @@ const MyWishList = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // if (data.modifiedCount > 0) {
         toast.success('Booking successful.')
         navigate('/dashboard/')
-        // }
       })
   }
 

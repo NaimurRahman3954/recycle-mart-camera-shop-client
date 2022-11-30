@@ -3,7 +3,6 @@ import React from 'react'
 const Request = () => {
   return (
     <div className="container mx-auto p-0 lg:p-12" id="request">
-      {/* <h3>This is about me</h3> */}
       <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
         <div className="basis-1/2">
           <img

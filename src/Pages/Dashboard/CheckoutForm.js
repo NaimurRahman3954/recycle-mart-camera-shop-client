@@ -13,7 +13,6 @@ const CheckoutForm = ({ booking }) => {
   const { price, email, buyer, _id } = booking
 
   useEffect(() => {
-    // Create PaymentIntent as soon as the page loads
     fetch(
       'https://assignment-12-server-sage.vercel.app/create-payment-intent',
       {
@@ -71,7 +70,6 @@ const CheckoutForm = ({ booking }) => {
     }
     if (paymentIntent.status === 'succeeded') {
       console.log('card info', card)
-      // store payment info in the database
       const payment = {
         price,
         transactionId: paymentIntent.id,

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Footer = () => {
-  // dynamic date 🔥🔥🔥
   const today = new Date()
   const year = today.getFullYear()
 
@@ -60,7 +59,6 @@ const Footer = () => {
         </footer>
         <footer className="footer px-10 py-8 border-t border-y-gray-300 text-base-content border-base-300">
           <div className="items-center">
-            {/* // dynamic date 🔥🔥🔥 */}
             <p>
               <small>Copyright © {year}</small>
             </p>

@@ -6,7 +6,6 @@ import Loading from '../Shared/Loading'
 
 const MyProducts = () => {
   const [deletingProduct, setDeletingProduct] = useState(null)
-  // const [advertised, setAvdertised] = useState(false)
   const closeModal = () => {
     setDeletingProduct(null)
   }

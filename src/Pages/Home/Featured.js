@@ -39,7 +39,7 @@ const Featured = () => {
                 <div>
                   {product.advertised && (
                     <ProductCard
-                      key={product.name}
+                      key={product._id}
                       product={product}
                       setCamera={setCamera}
                     ></ProductCard>

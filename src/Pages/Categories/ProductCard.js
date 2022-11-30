@@ -43,17 +43,11 @@ const ProductCard = ({ product, setCamera }) => {
       .then((data) => {
         console.log(data)
         if (data.acknowledged) {
-          // setCamera(null)
           toast.success('Added to the wishlists')
-          // refetch()
         } else {
           toast.error(data.message)
         }
       })
-
-    // TODO: send data to the server
-    // and once data is saved then close the modal
-    // and display success toast
   }
 
   return (

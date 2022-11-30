@@ -11,7 +11,6 @@ const PageNotFound = () => {
         <div className="hero-content text-center mb-12">
           <div className="max-w-md">
             <img src="https://i.ibb.co/fQ10Y5k/404-Error-rafiki.png" alt="" />
-            {/* <h1 className="text-3xl font-bold">⚠️ 404</h1> */}
             <p className="py-6">
               The webpage you are looking for does not exist!
             </p>

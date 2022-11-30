@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query'
-import React, { useContext } from 'react'
+import React from 'react'
 import toast, { Toaster } from 'react-hot-toast'
-import { AuthContext } from '../../Contexts/Usercontext'
 import Loading from '../Shared/Loading'
 
 const AllUsers = () => {
@@ -75,7 +74,6 @@ const AllUsers = () => {
               <th>Role</th>
               <th>Admin</th>
               <th>Verify</th>
-              <th>Delete</th>
               <th></th>
             </tr>
           </thead>
@@ -105,9 +103,6 @@ const AllUsers = () => {
                       Verify
                     </button>
                   )}
-                </td>
-                <td>
-                  <button className="btn btn-xs btn-error">Delete</button>
                 </td>
               </tr>
             ))}
