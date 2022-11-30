@@ -12,18 +12,21 @@ const AllUsers = () => {
   } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:8000/users', {
-        headers: {
-          authorization: `bearer ${localStorage.getItem('accessToken')}`,
-        },
-      })
+      const res = await fetch(
+        'https://assignment-12-server-sage.vercel.app/users',
+        {
+          headers: {
+            authorization: `bearer ${localStorage.getItem('accessToken')}`,
+          },
+        }
+      )
       const data = await res.json()
       return data
     },
   })
 
   const handleMakeAdmin = (id) => {
-    fetch(`http://localhost:8000/users/admin/${id}`, {
+    fetch(`https://assignment-12-server-sage.vercel.app/users/admin/${id}`, {
       method: 'PUT',
       headers: {
         authorization: `bearer ${localStorage.getItem('accessToken')}`,
@@ -39,7 +42,7 @@ const AllUsers = () => {
   }
 
   const handleVerify = (id) => {
-    fetch(`http://localhost:8000/users/sellers/${id}`, {
+    fetch(`https://assignment-12-server-sage.vercel.app/users/sellers/${id}`, {
       method: 'PUT',
       headers: {
         authorization: `bearer ${localStorage.getItem('accessToken')}`,

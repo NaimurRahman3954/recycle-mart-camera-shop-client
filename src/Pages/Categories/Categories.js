@@ -12,14 +12,14 @@ const Categories = () => {
   // const { data: categories = [] } = useQuery({
   //   queryKey: ['categories'],
   //   queryFn: () =>
-  //     fetch('http://localhost:8000/categories').then((res) => {
+  //     fetch('https://assignment-12-server-sage.vercel.app/categories').then((res) => {
   //       res.json()
   //       setloading(false)
   //     }),
   // })
 
   useEffect(() => {
-    fetch('http://localhost:8000/categories')
+    fetch('https://assignment-12-server-sage.vercel.app/categories')
       .then((res) => res.json())
       .then((data) => {
         setCategories(data)

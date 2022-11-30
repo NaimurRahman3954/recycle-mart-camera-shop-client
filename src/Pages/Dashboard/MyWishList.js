@@ -1,22 +1,17 @@
 import { useQuery } from '@tanstack/react-query'
 import React, { useContext, useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
-import BookingModal from '../Categories/BookingModal'
-import ProductCard from '../Categories/ProductCard'
 import Loading from '../Shared/Loading'
 
 const MyWishList = () => {
   const { user } = useContext(AuthContext)
-  const [camera, setCamera] = useState(null)
+  const navigate = useNavigate()
 
-  const url = `http://localhost:8000/wishlists?email=${user?.email}`
+  const url = `https://assignment-12-server-sage.vercel.app/wishlists?email=${user?.email}`
 
-  const {
-    data: wishlists = [],
-    isLoading,
-    refetch,
-  } = useQuery({
+  const { data: wishlists = [], isLoading } = useQuery({
     queryKey: ['wishlists', user?.email],
     queryFn: async () => {
       const res = await fetch(url, {
@@ -41,7 +36,7 @@ const MyWishList = () => {
       meetingLocation: location,
       paid: false,
     }
-    fetch(`http://localhost:8000/bookings/`, {
+    fetch(`https://assignment-12-server-sage.vercel.app/bookings/`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -50,10 +45,10 @@ const MyWishList = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.modifiedCount > 0) {
-          toast.success('Booking successful.')
-          refetch()
-        }
+        // if (data.modifiedCount > 0) {
+        toast.success('Booking successful.')
+        navigate('/dashboard/')
+        // }
       })
   }
 

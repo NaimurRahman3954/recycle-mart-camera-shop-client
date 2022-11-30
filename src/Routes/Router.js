@@ -60,7 +60,9 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/categories/${params.id}`),
+          fetch(
+            `https://assignment-12-server-sage.vercel.app/categories/${params.id}`
+          ),
       },
     ],
   },
@@ -108,7 +110,9 @@ const Router = createBrowserRouter([
         path: '/dashboard/payment/:id',
         element: <Payment></Payment>,
         loader: ({ params }) =>
-          fetch(`http://localhost:8000/bookings/${params.id}`),
+          fetch(
+            `https://assignment-12-server-sage.vercel.app/bookings/${params.id}`
+          ),
       },
     ],
   },

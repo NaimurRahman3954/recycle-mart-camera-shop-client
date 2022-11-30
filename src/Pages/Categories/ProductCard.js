@@ -32,7 +32,7 @@ const ProductCard = ({ product, setCamera }) => {
       location,
     }
 
-    fetch('http://localhost:8000/wishlists', {
+    fetch('https://assignment-12-server-sage.vercel.app/wishlists', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

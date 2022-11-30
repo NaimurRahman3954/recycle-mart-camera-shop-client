@@ -45,7 +45,7 @@ const AddProduct = () => {
             verified: false,
           }
 
-          fetch('http://localhost:8000/products', {
+          fetch('https://assignment-12-server-sage.vercel.app/products', {
             method: 'POST',
             headers: {
               'content-type': 'application/json',

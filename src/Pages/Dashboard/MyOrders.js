@@ -7,7 +7,7 @@ import Loading from '../Shared/Loading'
 const MyOrders = () => {
   const { user } = useContext(AuthContext)
 
-  const url = `http://localhost:8000/bookings?email=${user?.email}`
+  const url = `https://assignment-12-server-sage.vercel.app/bookings?email=${user?.email}`
 
   const { data: bookings = [], isLoading } = useQuery({
     queryKey: ['bookings', user?.email],

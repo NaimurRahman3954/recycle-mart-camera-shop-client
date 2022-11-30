@@ -67,7 +67,7 @@ const Login = () => {
   const saveUser = (name, email, photoURL) => {
     const user = { name, email, role: 'buyer', photoURL, verified: false }
     console.log(user)
-    fetch('http://localhost:8000/users', {
+    fetch('https://assignment-12-server-sage.vercel.app/users', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

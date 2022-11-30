@@ -25,7 +25,7 @@ const BookingModal = ({ camera, setCamera }) => {
       paid: false,
     }
 
-    fetch('http://localhost:8000/bookings', {
+    fetch('https://assignment-12-server-sage.vercel.app/bookings', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

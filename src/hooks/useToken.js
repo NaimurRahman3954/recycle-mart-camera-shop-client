@@ -4,7 +4,7 @@ const useToken = (email) => {
   const [token, setToken] = useState('')
   useEffect(() => {
     if (email) {
-      fetch(`http://localhost:8000/jwt?email=${email}`)
+      fetch(`https://assignment-12-server-sage.vercel.app/jwt?email=${email}`)
         .then((res) => res.json())
         .then((data) => {
           if (data.accessToken) {

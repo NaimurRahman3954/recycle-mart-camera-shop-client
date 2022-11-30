@@ -6,14 +6,10 @@ import ProductCard from '../Categories/ProductCard'
 import Loading from '../Shared/Loading'
 
 const Featured = () => {
-  const url = `http://localhost:8000/products/?advertised=true`
+  const url = `https://assignment-12-server-sage.vercel.app/products/?advertised=true`
   const [camera, setCamera] = useState(null)
 
-  const {
-    data: products,
-    isLoading,
-    refetch,
-  } = useQuery({
+  const { data: products, isLoading } = useQuery({
     queryKey: ['products'],
     queryFn: async () => {
       try {
