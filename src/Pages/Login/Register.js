@@ -19,7 +19,6 @@ const Register = () => {
   const navigate = useNavigate()
 
   if (token) {
-    // console.log('navigation test')
     navigate('/')
   }
 
@@ -43,6 +42,7 @@ const Register = () => {
         setSuccess(true)
         form.reset()
         updateUser(name, photoURL)
+        // 🛑🛑
         saveUser(name, email, role)
       })
       .catch((error) => {
@@ -61,8 +61,8 @@ const Register = () => {
       .catch((error) => console.error(error))
   }
 
-  const saveUser = (name, email, role) => {
-    const user = { name, email, role }
+  const saveUser = (name, email, role, photoURL) => {
+    const user = { name, email, role, photoURL, verified: false }
     console.log(user)
     fetch('http://localhost:8000/users', {
       method: 'POST',
@@ -77,17 +77,6 @@ const Register = () => {
         navigate('/')
       })
   }
-
-  // const getUserToken = (email) => {
-  //   fetch(`http://localhost:8000/jwt?email=${email}`)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       if (data.accessToken) {
-  //         localStorage.setItem('accessToken', data.accessToken)
-  //         navigate('/')
-  //       }
-  //     })
-  // }
 
   return (
     <div>

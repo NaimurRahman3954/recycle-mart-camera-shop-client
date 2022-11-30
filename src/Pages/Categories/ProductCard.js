@@ -24,6 +24,7 @@ const ProductCard = ({ product, setCamera }) => {
   const handleAddToWishList = () => {
     const wishlist = {
       product: name,
+      photo,
       price: resalePrice,
       originalPrice,
       condition,
@@ -62,7 +63,7 @@ const ProductCard = ({ product, setCamera }) => {
           <figure className="h-60 m-3">
             <img src={photo} alt="" width={250} height={250} />
           </figure>
-          <div className="card-body bg-base-200">
+          <div className="card-body bg-blue-50 rounded-b-xl">
             <h2 className="card-title">{name}</h2>
             <p className="text-sm text-justify ">Location: {location}</p>
             <p className="text-sm text-justify ">

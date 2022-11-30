@@ -10,7 +10,7 @@ const CategoryCard = (props) => {
           <figure className="w-28 m-3">
             <img src={photo} alt="" width={50} height={50} />
           </figure>
-          <div className="card-body bg-blue-50">
+          <div className="card-body bg-blue-50 rounded-r-xl">
             <h2 className="card-title">{title}</h2>
             <div className="card-actions justify-start">
               <div className="badge badge-outline badge-error">

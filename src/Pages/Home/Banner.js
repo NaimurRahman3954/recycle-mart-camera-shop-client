@@ -1,13 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
   return (
     <div className="container mx-auto">
       <div className="carousel w-full border-1">
         <div id="slide1" className="carousel-item relative w-full">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/GWTgmFT/1-dslr.png"
+              src="https://i.ibb.co/b1337KS/1-dslr.png"
               className=" max-w-sm mr-0 lg:mr-16"
               alt=""
             />
@@ -17,7 +18,9 @@ const Banner = () => {
                 Discover a wide range of DSLR Cameras including Canon, Nikon,
                 Sony at best price in Bangladesh.
               </p>
-              <button className="btn btn-primary">Learn More</button>
+              <Link to="/categories">
+                <button className="btn btn-primary">Explore</button>
+              </Link>
             </div>
           </div>
 
@@ -31,9 +34,9 @@ const Banner = () => {
           </div>
         </div>
         <div id="slide2" className="carousel-item relative w-full">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/mS00TWs/2-mirrorless.png"
+              src="https://i.ibb.co/XJpPVmZ/2-mirrorless.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
@@ -44,7 +47,9 @@ const Banner = () => {
                 in 2022, including our picks from Canon, Sony, Nikon. Fujifilm
                 and more.
               </p>
-              <button className="btn btn-primary">Learn More</button>
+              <Link to="/categories">
+                <button className="btn btn-primary">Explore</button>
+              </Link>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -57,9 +62,9 @@ const Banner = () => {
           </div>
         </div>
         <div id="slide3" className="carousel-item relative w-full">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/DLTWNRx/3-polaroid.png"
+              src="https://i.ibb.co/VSF4wGR/3-polaroid.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
@@ -70,7 +75,9 @@ const Banner = () => {
                 Mart. Buy Instant Camera Online with Best Instant Camera at Low
                 Price. ✓EMI Installment.
               </p>
-              <button className="btn btn-primary">Learn More</button>
+              <Link to="/categories">
+                <button className="btn btn-primary">Explore</button>
+              </Link>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -83,9 +90,9 @@ const Banner = () => {
           </div>
         </div>
         <div id="slide4" className="carousel-item relative w-full">
-          <div className="hero-content flex-col lg:flex-row-reverse">
+          <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              src="https://i.ibb.co/7JBPLns/4-movie-camera.png"
+              src="https://i.ibb.co/5WS3nSp/4-movie-camera.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
@@ -96,7 +103,9 @@ const Banner = () => {
                 Mark III · 3. Blackmagic Ursa Mini Pro 12K · 4. Blackmagic
                 Design URSA Mini Pro G2
               </p>
-              <button className="btn btn-primary">Learn More</button>
+              <Link to="/categories">
+                <button className="btn btn-primary">Explore</button>
+              </Link>
             </div>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

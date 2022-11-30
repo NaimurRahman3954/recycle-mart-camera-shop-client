@@ -6,6 +6,7 @@ import Loading from '../Shared/Loading'
 
 const MyProducts = () => {
   const [deletingProduct, setDeletingProduct] = useState(null)
+  // const [advertised, setAvdertised] = useState(false)
   const closeModal = () => {
     setDeletingProduct(null)
   }
@@ -44,6 +45,22 @@ const MyProducts = () => {
       })
   }
 
+  const handleAdvertise = (product) => {
+    fetch(`http://localhost:8000/products/${product._id}`, {
+      method: 'PUT',
+      headers: {
+        authorization: `bearer ${localStorage.getItem('accessToken')}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          refetch()
+          toast.success(`${product.name} advertised successfully`)
+        }
+      })
+  }
+
   if (isLoading) {
     return <Loading></Loading>
   }
@@ -60,6 +77,8 @@ const MyProducts = () => {
               <th>Photo</th>
               <th>Name</th>
               <th>Price</th>
+              <th>Availability</th>
+              <th>Advertise</th>
               <th>Delete</th>
               <th></th>
             </tr>
@@ -78,6 +97,27 @@ const MyProducts = () => {
                   </td>
                   <td>{product.name}</td>
                   <td>৳ {product.resalePrice}</td>
+                  <td>
+                    {!product.paid && (
+                      <label className="btn btn-sm btn-outline btn-disabled bg-transparent btn-warning">
+                        Available
+                      </label>
+                    )}
+                    {product.paid && <span className="text-success">sold</span>}
+                  </td>
+                  <td>
+                    {!product.advertised && (
+                      <label
+                        onClick={() => handleAdvertise(product)}
+                        className="btn btn-sm btn-warning"
+                      >
+                        Advertise
+                      </label>
+                    )}
+                    {product.advertised && product.advertised && (
+                      <span className="text-success">advertised</span>
+                    )}
+                  </td>
                   <td>
                     <label
                       onClick={() => setDeletingProduct(product)}

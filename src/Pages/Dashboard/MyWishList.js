@@ -1,14 +1,22 @@
 import { useQuery } from '@tanstack/react-query'
-import React, { useContext } from 'react'
-import toast from 'react-hot-toast'
+import React, { useContext, useState } from 'react'
+import toast, { Toaster } from 'react-hot-toast'
 import { AuthContext } from '../../Contexts/Usercontext'
+import BookingModal from '../Categories/BookingModal'
+import ProductCard from '../Categories/ProductCard'
+import Loading from '../Shared/Loading'
 
 const MyWishList = () => {
   const { user } = useContext(AuthContext)
+  const [camera, setCamera] = useState(null)
 
   const url = `http://localhost:8000/wishlists?email=${user?.email}`
 
-  const { data: wishlists = [], refetch } = useQuery({
+  const {
+    data: wishlists = [],
+    isLoading,
+    refetch,
+  } = useQuery({
     queryKey: ['wishlists', user?.email],
     queryFn: async () => {
       const res = await fetch(url, {
@@ -21,21 +29,36 @@ const MyWishList = () => {
     },
   })
 
-  const handleBookNow = (id) => {
-    fetch(`http://localhost:8000/bookings/${id}`, {
-      method: 'PUT',
+  const handleBookNow = (wishlist) => {
+    const { product, price, photo, location } = wishlist
+
+    const newBooking = {
+      product: product,
+      price: price,
+      photo: photo,
+      email: user.email,
+      // phone,
+      meetingLocation: location,
+      paid: false,
+    }
+    fetch(`http://localhost:8000/bookings/`, {
+      method: 'POST',
       headers: {
-        authorization: `bearer ${localStorage.getItem('accessToken')}`,
+        'content-type': 'application/json',
       },
+      body: JSON.stringify(newBooking),
     })
       .then((res) => res.json())
       .then((data) => {
-        //   console.log('made admin', data)
         if (data.modifiedCount > 0) {
           toast.success('Booking successful.')
           refetch()
         }
       })
+  }
+
+  if (isLoading) {
+    return <Loading></Loading>
   }
 
   return (
@@ -65,8 +88,8 @@ const MyWishList = () => {
                 <td>{wishlist.location}</td>
                 <td>
                   <button
-                    onClick={() => handleBookNow(wishlist._id)}
-                    className="btn btn-xs btn-success"
+                    onClick={() => handleBookNow(wishlist)}
+                    className="btn btn-xs btn-success block"
                   >
                     Book Now
                   </button>
@@ -75,6 +98,7 @@ const MyWishList = () => {
             ))}
           </tbody>
         </table>
+        <Toaster></Toaster>
       </div>
     </div>
   )

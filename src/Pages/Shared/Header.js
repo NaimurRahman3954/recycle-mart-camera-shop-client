@@ -81,7 +81,6 @@ const Header = () => {
             <div className="flex items-center align-middle">
               <div className="menu menu-horizontal p-0 hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">{privateMenuItems}</ul>
-                {/* {privateMenuItems} */}
               </div>
               <div>
                 <button onClick={handleSignOut} className="btn btn-sm">
@@ -130,17 +129,13 @@ const Header = () => {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-three-dots-vertical"
+            viewBox="0 0 16 16"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h8m-8 6h16"
-            />
+            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
           </svg>
         </label>
       </div>

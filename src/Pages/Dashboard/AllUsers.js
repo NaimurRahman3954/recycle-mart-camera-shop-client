@@ -12,12 +12,11 @@ const AllUsers = () => {
   } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      // const res = await fetch(url, {
-      //   headers: {
-      //     authorization: `bearer ${localStorage.getItem('accessToken')}`,
-      //   },
-      // })
-      const res = await fetch('http://localhost:8000/users')
+      const res = await fetch('http://localhost:8000/users', {
+        headers: {
+          authorization: `bearer ${localStorage.getItem('accessToken')}`,
+        },
+      })
       const data = await res.json()
       return data
     },
@@ -32,9 +31,24 @@ const AllUsers = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        //   console.log('made admin', data)
         if (data.modifiedCount > 0) {
           toast.success('Make admin successful.')
+          refetch()
+        }
+      })
+  }
+
+  const handleVerify = (id) => {
+    fetch(`http://localhost:8000/users/sellers/${id}`, {
+      method: 'PUT',
+      headers: {
+        authorization: `bearer ${localStorage.getItem('accessToken')}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          toast.success('Verification successful.')
           refetch()
         }
       })
@@ -57,6 +71,7 @@ const AllUsers = () => {
               <th>Email</th>
               <th>Role</th>
               <th>Admin</th>
+              <th>Verify</th>
               <th>Delete</th>
               <th></th>
             </tr>
@@ -75,6 +90,16 @@ const AllUsers = () => {
                       className="btn btn-xs btn-success"
                     >
                       Make Admin
+                    </button>
+                  )}
+                </td>
+                <td>
+                  {user?.verified !== true && (
+                    <button
+                      onClick={() => handleVerify(user._id)}
+                      className="btn btn-xs btn-warning"
+                    >
+                      Verify
                     </button>
                   )}
                 </td>

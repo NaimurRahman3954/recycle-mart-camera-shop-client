@@ -1,12 +1,9 @@
-import { useQuery } from '@tanstack/react-query'
-import userEvent from '@testing-library/user-event'
 import { format } from 'date-fns'
 import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import toast, { Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
-import Loading from '../Shared/Loading'
 
 const AddProduct = () => {
   const { user } = useContext(AuthContext)
@@ -32,39 +29,37 @@ const AddProduct = () => {
       .then((res) => res.json())
 
       .then((imgData) => {
-        // if (imgData.success) {
-        console.log(imgData.data.url)
-        const product = {
-          name: data.name,
-          photo: imgData.data.url,
-          location: data.location,
-          resalePrice: data.resalePrice,
-          originalPrice: data.originalPrice,
-          yearOfUse: data.yearOfUse,
-          condition: data.condition,
-          postTime: date,
-          sellersName: user.displayName,
-          verified: false,
-        }
+        if (imgData.success) {
+          console.log(imgData.data.url)
+          const product = {
+            name: data.name,
+            photo: imgData.data.url,
+            location: data.location,
+            resalePrice: data.resalePrice,
+            originalPrice: data.originalPrice,
+            category: data.category,
+            yearOfUse: data.yearOfUse,
+            condition: data.condition,
+            postTime: date,
+            sellersName: user.displayName,
+            verified: false,
+          }
 
-        // console.log(product)
-
-        fetch('http://localhost:8000/products', {
-          method: 'POST',
-          headers: {
-            'content-type': 'application/json',
-            authorization: `bearer ${localStorage.getItem('accessToken')}`,
-          },
-          body: JSON.stringify(product),
-        })
-          .then((res) => res.json())
-          .then((result) => {
-            console.log(result)
-            // form.reset()
-            toast.success(`${data.name} is added successfully`)
-            navigate('/dashboard/myproducts')
+          fetch('http://localhost:8000/products', {
+            method: 'POST',
+            headers: {
+              'content-type': 'application/json',
+              authorization: `bearer ${localStorage.getItem('accessToken')}`,
+            },
+            body: JSON.stringify(product),
           })
-        // }
+            .then((res) => res.json())
+            .then((result) => {
+              console.log(result)
+              toast.success(`${data.name} is added successfully`)
+              navigate('/dashboard/myproducts')
+            })
+        }
       })
   }
 
@@ -140,6 +135,25 @@ const AddProduct = () => {
             </div>
             {/* right half */}
             <div className="basis-1/2 p-6">
+              <div className="form-control w-full mt-3">
+                <label className="label">
+                  <span className="label-text">Product Category</span>
+                </label>
+                <select
+                  {...register('category')}
+                  className="select  input-bordered  w-full"
+                >
+                  <option value="dslr">DSLR Camera</option>
+                  <option value="mirrorless">Mirrorless Camera</option>
+                  <option value="polaroid">Polaroid Camera</option>
+                  <option value="movieCamera">Movie Camera</option>
+                  <option value="actionCamera">Action Camera</option>
+                  <option value="vrCamera">360 VR Camera</option>
+                </select>
+                {errors.category && (
+                  <p className="text-red-500">{errors.category.message}</p>
+                )}
+              </div>
               <div className="form-control w-full mt-3">
                 <label className="label">
                   <span className="label-text">Years of Use</span>
