@@ -2,17 +2,18 @@
 
 <!-- 📌📌 update the live site link  -->
 
-Watch the [Live Site](https://ielts-mentor-9c05a.web.app/).
+Watch the [Live Site](https://developers-portal-d26e9.web.app/).
 
 ## Features
 
 1. Navigation bar created with React Router
 2. Slider banner
 3. Category for products
-4. Product description and review page
-5. Private routes
-6. Blog
-7. Data served from MongoDB server
+4. Private routes
+5. Blog
+6. Data served from MongoDB server
+7. Stripe payment
+8. Admin Route
 
 ## Learning Outcome
 
@@ -27,7 +28,7 @@ Watch the [Live Site](https://ielts-mentor-9c05a.web.app/).
 
 ## Technology used
 
-`React`, `Javascript`, `Tailwind CSS`, `DaisyUI`, `Firebase`, `Node`, `Express`, `MongoDB`, `Vercel`
+`React`, `Javascript`, `Tailwind CSS`, `DaisyUI`, `Firebase`, `Node`, `Express`, `MongoDB`, `Vercel`, `Stripe`
 
 ## Admin Credentials
 
