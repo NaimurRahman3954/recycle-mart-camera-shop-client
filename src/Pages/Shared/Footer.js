@@ -9,33 +9,31 @@ const Footer = () => {
       <div className="container mx-auto">
         <footer className="footer p-10 pt-16 text-base-content">
           <div>
-            <span className="footer-title">Services</span>
+            <span className="footer-title">Categories</span>
+            <a href="/" className="link link-hover"></a>
             <a href="/" className="link link-hover">
-              Computer-delivered IELTS Mock Test
+              DSLR Camera
             </a>
             <a href="/" className="link link-hover">
-              Complete IELTS Preparation
+              Mirrorless Camera
             </a>
             <a href="/" className="link link-hover">
-              IELTS Listening Preparation
+              Polaroid Camera
             </a>
             <a href="/" className="link link-hover">
-              IELTS Reading Preparation
+              Action Camera
             </a>
             <a href="/" className="link link-hover">
-              IELTS Writing Preparation
-            </a>
-            <a href="/" className="link link-hover">
-              IELTS Speaking Preparation
+              360 VR Camera
             </a>
           </div>
           <div>
             <span className="footer-title">Company</span>
-            <a href="#about-me" className="link link-hover">
-              About me
+            <a href="/" className="link link-hover">
+              Featured
             </a>
-            <a href="#contact" className="link link-hover">
-              Contact
+            <a href="#request" className="link link-hover">
+              Request Product
             </a>
             <a href="/" className="link link-hover">
               Affiliate
@@ -65,7 +63,7 @@ const Footer = () => {
             <p>
               <span className="font-bold text-primary">Recycle Mart</span>
               <span className="m-0 lg:ml-2 block lg:inline">
-                Providing quality education for more than 7 years
+                Buy excellent cameras in affordable price
               </span>
             </p>
           </div>
