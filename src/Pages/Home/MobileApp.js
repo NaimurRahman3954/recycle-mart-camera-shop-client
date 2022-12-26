@@ -23,7 +23,6 @@ const MobileApp = () => {
               <span class="speaker"></span>
             </div>
             <div className="screen grid place-items-center gap-0">
-              {/* <p>Download our Mobile App</p> */}
               <img
                 src="https://sites.google.com/site/idontgetitbutton/_/rsrc/1444103808278/home/blog/untitledpost/appstorebadges.png"
                 alt=""
