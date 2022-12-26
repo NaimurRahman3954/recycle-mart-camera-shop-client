@@ -4,7 +4,7 @@ import './MobileApp.css'
 const MobileApp = () => {
   return (
     <div
-      className="py-6"
+      className="pb-6 pt-1 mt-16"
       style={{
         backgroundImage: `url(https://i.ibb.co/vY6f8pf/background.jpg)`,
         backgroundSize: 'cover',
