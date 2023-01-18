@@ -74,7 +74,7 @@ const AllUsers = () => {
               <th>Role</th>
               <th>Admin</th>
               <th>Verify</th>
-              <th></th>
+              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>

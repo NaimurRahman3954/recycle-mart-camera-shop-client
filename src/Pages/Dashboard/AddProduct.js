@@ -67,7 +67,7 @@ const AddProduct = () => {
     <div>
       <Toaster></Toaster>
       <h1 className="text-5xl font-bold mt-12 text-center">Add a Product!</h1>
-      <div className="p-7 mx-auto w-full bg-[#201F23] rounded-md mt-16">
+      <div className="p-7 mx-auto w-full bg-base-200 rounded-md mt-16">
         <form onSubmit={handleSubmit(handleProduct)}>
           <div className="flex flex-col lg:flex-row flex-wrap w-full">
             {/* left half */}
