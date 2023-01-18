@@ -19,14 +19,14 @@ const Payment = () => {
   console.log('booking data', booking)
   return (
     <div className="text-center">
-      <h1 className="text-5xl font-bold mt-12">
+      <h1 className="text-5xl font-bold mt-48">
         Payment for <span className="text-error">{product}</span>
       </h1>
       <p className="text-xl mt-6">
         Please pay <span className="font-bold">৳ {price}</span> for completing
         the order.
       </p>
-      <div className="w-full lg:w-1/2 my-12 mx-auto border border-1  p-12 py-16 rounded-lg">
+      <div className="w-full lg:w-1/2 my-12 mx-auto border border-1 border-zinc-800 p-12 py-16 rounded-lg">
         <Elements stripe={stripePromise}>
           <CheckoutForm booking={booking} />
         </Elements>

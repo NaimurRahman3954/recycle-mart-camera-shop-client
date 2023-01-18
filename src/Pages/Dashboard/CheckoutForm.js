@@ -120,7 +120,7 @@ const CheckoutForm = ({ booking }) => {
           type="submit"
           disabled={!stripe || !clientSecret || processing}
         >
-          Pay
+          Pay →
         </button>
       </form>
       <p className="text-red-500">{cardError}</p>
