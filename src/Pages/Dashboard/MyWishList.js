@@ -56,7 +56,7 @@ const MyWishList = () => {
   return (
     <div>
       <h1 className="text-5xl font-bold mt-12 text-center">My Wishlist</h1>
-      <div className="overflow-x-auto pt-5">
+      <div className="overflow-x-auto pt-5 text-black">
         <table className="table w-full">
           <thead>
             <tr>
