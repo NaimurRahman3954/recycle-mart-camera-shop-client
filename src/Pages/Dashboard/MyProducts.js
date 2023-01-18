@@ -77,7 +77,7 @@ const MyProducts = () => {
     <div>
       <Toaster></Toaster>
       <h1 className="text-5xl font-bold mt-12 text-center">My Products</h1>
-      <div className="overflow-x-auto pt-5">
+      <div className="overflow-x-auto pt-5 text-black">
         <table className="table w-full">
           <thead>
             <tr>
@@ -88,7 +88,7 @@ const MyProducts = () => {
               <th>Availability</th>
               <th>Advertise</th>
               <th>Delete</th>
-              <th></th>
+              {/* <th></th> */}
             </tr>
           </thead>
           <tbody>
