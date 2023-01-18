@@ -16,7 +16,6 @@ import Home from '../Pages/Home/Home'
 import Login from '../Pages/Login/Login'
 import Register from '../Pages/Login/Register'
 import AdminRoute from './AdminRoute'
-import PrivateRoute from './PrivateRoute'
 
 const Router = createBrowserRouter([
   {
@@ -50,11 +49,7 @@ const Router = createBrowserRouter([
       },
       {
         path: '/categories/:id',
-        element: (
-          <PrivateRoute>
-            <Products></Products>
-          </PrivateRoute>
-        ),
+        element: <Products></Products>,
         loader: ({ params }) =>
           fetch(
             `https://assignment-12-server-sage.vercel.app/categories/${params.id}`
@@ -64,11 +59,7 @@ const Router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: (
-      <PrivateRoute>
-        <DashboardLayout></DashboardLayout>
-      </PrivateRoute>
-    ),
+    element: <DashboardLayout></DashboardLayout>,
     children: [
       {
         path: '/dashboard',

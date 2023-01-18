@@ -16,8 +16,6 @@ const MobileApp = () => {
         <h1 className="text-5xl font-bold mb-16 -mt-[420px]">
           Download our Mobile App 📲
         </h1>
-        {/* <div className="flex flex-wrap justify-center lg:mx-16"> */}
-        {/* <div className="basis-1/2"> */}
         <div className="mobile-phone bg-white">
           <div className="brove">
             <span class="speaker"></span>
@@ -30,7 +28,6 @@ const MobileApp = () => {
             />
           </div>
         </div>
-        {/* </div> */}
       </div>
     </div>
   )
