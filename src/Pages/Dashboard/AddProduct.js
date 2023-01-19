@@ -1,5 +1,5 @@
 import { format } from 'date-fns'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import toast, { Toaster } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
@@ -67,7 +67,7 @@ const AddProduct = () => {
     <div>
       <Toaster></Toaster>
       <h1 className="text-5xl font-bold mt-12 text-center">Add a Product!</h1>
-      <div className="p-7 mx-auto w-full">
+      <div className="p-7 mx-auto w-full bg-[#201F23] rounded-md mt-16">
         <form onSubmit={handleSubmit(handleProduct)}>
           <div className="flex flex-col lg:flex-row flex-wrap w-full">
             {/* left half */}
