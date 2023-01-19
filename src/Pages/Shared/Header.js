@@ -1,13 +1,10 @@
 import React, { useContext } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext)
   console.log('context', user)
-
-  const location = useLocation()
-  const isHome = location.pathname === '/'
 
   const handleSignOut = () => {
     logOut()
@@ -37,7 +34,7 @@ const Header = () => {
 
   const privateMenuItems = (
     <>
-      <li className={`text-${isHome ? 'white' : 'black'}`}>
+      <li className={`text-white`}>
         <Link to="/dashboard">Dashboard</Link>
       </li>
       {/* Buyer or Seller */}
@@ -57,9 +54,7 @@ const Header = () => {
         <div className="navbar-start">
           <Link
             to="/"
-            className={`btn btn-ghost normal-case text-xl font-bold font-mono text-${
-              isHome ? 'white' : 'primary'
-            }`}
+            className={`btn btn-ghost normal-case text-xl font-bold font-mono text-white`}
           >
             {/* Recycle Mart */}
             <img
@@ -76,21 +71,13 @@ const Header = () => {
               : 'navbar-center hidden lg:flex'
           }
         >
-          <ul
-            className={`menu menu-horizontal p-0 text-${
-              isHome ? 'white' : 'black'
-            }`}
-          >
-            {menuItems}
-          </ul>
+          <ul className={`menu menu-horizontal p-0 text-white`}>{menuItems}</ul>
         </div>
         <div className="navbar-end">
           {!user?.uid && (
             <div className="flex justify-center gap-4">
               <Link
-                className={`btn btn-sm btn-outline btn-warning mx-1 text-${
-                  isHome ? 'white' : 'black'
-                }`}
+                className={`btn btn-sm btn-outline btn-warning mx-1 text-white`}
                 to="/login"
               >
                 Login
