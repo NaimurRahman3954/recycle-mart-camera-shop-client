@@ -3,7 +3,7 @@ import { Player } from '@lottiefiles/react-lottie-player'
 
 const Request = () => {
   return (
-    <div className="container mx-auto p-0 lg:p-12" id="request">
+    <div className="container mx-auto mb-16 p-0 lg:p-12" id="request">
       <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
         <div className="basis-1/2">
           {/* <img
@@ -17,8 +17,8 @@ const Request = () => {
             loop
             autoplay
             // speed={10}
-            direction={-1}
-            style={{ height: '300px', width: '300px' }}
+            // direction={-1}
+            // style={{ height: '300px', width: '300px' }}
           />
         </div>
         <div className="text-left basis-1/2">
