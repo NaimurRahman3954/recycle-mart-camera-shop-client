@@ -32,7 +32,7 @@ const Categories = () => {
     <div className="container mx-auto my-10 text-center">
       <>
         {loading ? (
-          <button className="btn loading bg-primary my-16">loading</button>
+          <button className="btn loading bg-warning my-16">loading</button>
         ) : (
           <div className="flex flex-wrap align-middle justify-center">
             {categories.map((category) => (
