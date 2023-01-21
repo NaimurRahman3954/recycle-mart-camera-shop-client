@@ -6,10 +6,19 @@ const Request = () => {
     <div className="container mx-auto p-0 lg:p-12" id="request">
       <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
         <div className="basis-1/2">
-          <img
+          {/* <img
             src="https://i.ibb.co/GdnFbbF/request-blue.png"
             className="max-w-lg mx-auto "
             alt=""
+          /> */}
+          <Player
+            src="https://assets3.lottiefiles.com/packages/lf20_abqysclq.json"
+            className="player"
+            loop
+            autoplay
+            // speed={10}
+            direction={-1}
+            style={{ height: '300px', width: '300px' }}
           />
         </div>
         <div className="text-left basis-1/2">
