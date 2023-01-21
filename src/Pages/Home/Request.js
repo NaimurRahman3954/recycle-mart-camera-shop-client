@@ -3,7 +3,7 @@ import { Player } from '@lottiefiles/react-lottie-player'
 
 const Request = () => {
   return (
-    <div className="container mx-auto mb-16 p-0 lg:p-12" id="request">
+    <div className="container mx-auto lg:mb-0 mb-16 p-0 lg:p-12" id="request">
       <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
         <div className="basis-1/2">
           <Player
