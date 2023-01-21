@@ -4,7 +4,7 @@ import './MobileApp.css'
 const MobileApp = () => {
   return (
     <div
-      className="pb-6 pt-1 mt-60 h-72 mb-96"
+      className="pb-6 pt-1 my-72 h-72"
       style={{
         backgroundImage: `url(https://i.ibb.co/vY6f8pf/background.jpg)`,
         backgroundSize: 'cover',
@@ -14,7 +14,7 @@ const MobileApp = () => {
     >
       <div className="container mx-auto my-48">
         <h1 className="text-5xl font-bold mb-16 -mt-[420px]">
-          Download our Mobile App
+          Download our Mobile App 📲📱
         </h1>
         {/* <div className="flex flex-wrap justify-center lg:mx-16"> */}
         {/* <div className="basis-1/2"> */}
