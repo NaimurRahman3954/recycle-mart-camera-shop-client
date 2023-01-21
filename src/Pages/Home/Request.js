@@ -19,25 +19,25 @@ const Request = () => {
                 <input
                   type="text"
                   placeholder="name"
-                  className="input input-bordered"
+                  className="input input-bordered bg-black"
                 />
               </div>
               <div className="form-control">
                 <input
                   type="text"
                   placeholder="email"
-                  className="input input-bordered"
+                  className="input input-bordered bg-black"
                 />
               </div>
               <div className="form-control">
                 <textarea
-                  className="textarea textarea-warning h-32"
+                  className="textarea bg-black h-32"
                   placeholder="product details"
                 ></textarea>
               </div>
 
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Request</button>
+                <button className="btn btn-warning">Request</button>
               </div>
             </div>
           </div>
