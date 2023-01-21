@@ -11,9 +11,6 @@ const Request = () => {
             className="player"
             loop
             autoplay
-            // speed={10}
-            // direction={-1}
-            // style={{ height: '300px', width: '300px' }}
           />
         </div>
         <div className="text-left basis-1/2">
