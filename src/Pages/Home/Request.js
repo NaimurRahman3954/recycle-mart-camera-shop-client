@@ -1,4 +1,5 @@
 import React from 'react'
+import { Player } from '@lottiefiles/react-lottie-player'
 
 const Request = () => {
   return (
