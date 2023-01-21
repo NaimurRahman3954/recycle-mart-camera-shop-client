@@ -12,7 +12,7 @@ const Request = () => {
           />
         </div>
         <div className="text-left basis-1/2">
-          <div className="card max-w-lg  mx-auto">
+          <div className="card max-w-lg bg-[#201F23] mx-auto">
             <div className="card-body">
               <h1 className="text-5xl font-bold mb-6">Request a Product</h1>
               <div className="form-control">
@@ -31,7 +31,7 @@ const Request = () => {
               </div>
               <div className="form-control">
                 <textarea
-                  className="textarea textarea-primary h-32"
+                  className="textarea textarea-warning h-32"
                   placeholder="product details"
                 ></textarea>
               </div>
