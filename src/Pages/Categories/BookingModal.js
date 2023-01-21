@@ -47,7 +47,7 @@ const BookingModal = ({ camera, setCamera }) => {
   return (
     <div>
       <input type="checkbox" id="product-modal" className="modal-toggle" />
-      <div className="modal">
+      <div className="modal text-black">
         <div className="modal-box relative">
           <label
             htmlFor="product-modal"
