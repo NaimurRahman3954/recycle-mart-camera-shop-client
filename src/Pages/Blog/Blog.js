@@ -2,6 +2,7 @@ import React from 'react'
 import BlogCard1 from './BlogCard1'
 import BlogCard2 from './BlogCard2'
 import BlogCard3 from './BlogCard3'
+import BlogCard4 from './BlogCard4'
 
 const Blog = () => {
   return (
@@ -13,6 +14,7 @@ const Blog = () => {
       {/* 📌📌 Blog 3 */}
       <BlogCard3></BlogCard3>
       {/* 📌📌 Blog 4 */}
+      <BlogCard4></BlogCard4>
     </div>
   )
 }
