@@ -28,7 +28,7 @@ const BlogCard4 = () => {
         <div className="flex items-center justify-between mt-4">
           <a
             href="https://www.codeinwp.com/blog/angular-vs-vue-vs-react/"
-            className="hover:underline text-blue-700"
+            className="hover:underline text-warning"
           >
             Read more →
           </a>
