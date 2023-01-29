@@ -1,6 +1,7 @@
 import React from 'react'
 import BlogCard1 from './BlogCard1'
 import BlogCard2 from './BlogCard2'
+import BlogCard3 from './BlogCard3'
 
 const Blog = () => {
   return (
@@ -10,6 +11,7 @@ const Blog = () => {
       {/* 📌📌 Blog 2 */}
       <BlogCard2></BlogCard2>
       {/* 📌📌 Blog 3 */}
+      <BlogCard3></BlogCard3>
       <div className="text-gray-900 m-5">
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
           <div className="flex items-center justify-between">
