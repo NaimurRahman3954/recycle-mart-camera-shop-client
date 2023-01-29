@@ -3,7 +3,7 @@ import React from 'react'
 const BlogCard3 = () => {
   return (
     <div className="m-5">
-      <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
+      <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg bg-[#201F23]">
         <div className="flex items-center justify-between">
           <span className="text-sm dark:text-gray-500">Nov 24, 2022</span>
           <button className="font-bold rounded btn-error px-3 py-1 my-2">
