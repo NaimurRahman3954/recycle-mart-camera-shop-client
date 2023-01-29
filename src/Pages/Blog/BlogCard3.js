@@ -34,7 +34,7 @@ const BlogCard3 = () => {
         <div className="flex items-center justify-between mt-4">
           <a
             href="https://moduscreate.com/blog/heres-why-you-should-write-unit-tests/"
-            className="hover:underline text-blue-700"
+            className="hover:underline text-warning"
           >
             Read more →
           </a>
