@@ -54,7 +54,7 @@ const Footer = () => {
             </a>
           </div>
         </footer>
-        <footer className="footer px-10 py-8 border-t border-y-gray-300 text-base-content border-base-300">
+        <footer className="footer px-10 py-8 border-t border-y-zinc-700 border-zinc-800">
           <div className="items-center">
             <p>
               <small>Copyright © {year}</small>
