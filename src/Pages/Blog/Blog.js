@@ -1,11 +1,11 @@
 import React from 'react'
-import BlogCard from './BlogCard'
+import BlogCard1 from './BlogCard1'
 
 const Blog = () => {
   return (
     <div className="mt-5">
-      <BlogCard></BlogCard>
       {/* 📌📌 Blog 1 */}
+      <BlogCard1></BlogCard1>
       <div className="text-gray-900 m-5">
         <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg shadow-sm bg-base-200">
           <div className="flex items-center justify-between">

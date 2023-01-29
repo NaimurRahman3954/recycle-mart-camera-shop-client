@@ -1,11 +1,11 @@
 import React from 'react'
 
-const BlogCard = () => {
+const BlogCard1 = () => {
   return (
-    <div className="text-gray-900 m-5">
-      <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg bg-base-200">
+    <div className="m-5">
+      <div className="container max-w-4xl px-10 py-6 mx-auto rounded-lg bg-[#201F23]">
         <div className="flex items-center justify-between">
-          <span className="text-sm dark:text-gray-600">Nov 24, 2022</span>
+          <span className="text-sm dark:text-gray-500">Nov 24, 2022</span>
           <button className="font-bold rounded btn-error px-3 py-1 my-2">
             React
           </button>
@@ -29,7 +29,7 @@ const BlogCard = () => {
         <div className="flex items-center justify-between mt-4">
           <a
             href="https://blog.saeloun.com/2021/11/11/8-ways-to-handle-react-state-part1.html"
-            className="hover:underline text-blue-700"
+            className="hover:underline text-warning"
           >
             Read more →
           </a>
@@ -39,4 +39,4 @@ const BlogCard = () => {
   )
 }
 
-export default BlogCard
+export default BlogCard1
