@@ -30,7 +30,6 @@ const Categories = () => {
 
   return (
     <div className="container mx-auto my-10 text-center">
-      {/* <Banner></Banner> */}
       <>
         {loading ? (
           <button className="btn loading bg-primary my-16">loading</button>

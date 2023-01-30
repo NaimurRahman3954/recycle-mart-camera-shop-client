@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className="App">
       <Hero></Hero>
-      <h1 className="text-5xl font-bold mt-12">Categories 📸</h1>
+      <h1 className="text-5xl font-bold mt-36">Categories 📸</h1>
       <Categories></Categories>
       <Link to="/categories">
         <button className="btn btn-warning mb-16">See All →</button>
