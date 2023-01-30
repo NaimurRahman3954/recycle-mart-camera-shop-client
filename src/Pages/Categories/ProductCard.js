@@ -55,7 +55,7 @@ const ProductCard = ({ product, setCamera }) => {
   return (
     <div>
       <div className="m-5">
-        <div className="card w-96 outline outline-1 outline-base-300">
+        <div className="card w-96 outline outline-1 outline-zinc-800">
           <figure className="h-72">
             <PhotoProvider>
               <PhotoView src={photo}>
@@ -64,7 +64,7 @@ const ProductCard = ({ product, setCamera }) => {
               </PhotoView>
             </PhotoProvider>
           </figure>
-          <div className="card-body bg-base-200 rounded-b-xl">
+          <div className="card-body bg-[#201F23] rounded-b-xl">
             <h2 className="card-title">{name}</h2>
             <p className="text-sm text-justify ">Location: {location}</p>
             <p className="text-sm text-justify ">
@@ -79,20 +79,18 @@ const ProductCard = ({ product, setCamera }) => {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="checkbox checkbox-xs checkbox-primary checked disabled ml-1"
+                  className="checkbox checkbox-xs checkbox- checked btn-disabled ml-1"
                 />
               </div>
             </div>
             <p className="text-sm text-justify">Posted on: {postTime}</p>
 
-            <div className="badge badge-warning font-extrabold my-3 p-3">
-              ৳ {resalePrice}
-            </div>
+            <div className="badge font-extrabold my-3 p-3">৳ {resalePrice}</div>
 
             {/* The button to open modal */}
             <label
               onClick={handleAddToWishList}
-              className="btn btn-outline flex gap-2"
+              className="btn btn-outline text-white flex gap-2"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +111,7 @@ const ProductCard = ({ product, setCamera }) => {
             <label
               htmlFor="product-modal"
               onClick={() => setCamera(product)}
-              className="btn btn-primary flex"
+              className="btn btn-warning flex"
             >
               Book Now
             </label>
