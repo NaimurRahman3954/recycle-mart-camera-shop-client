@@ -7,7 +7,7 @@ const CategoryCard = (props) => {
     <div>
       <div className="m-5 w-96">
         <div className="card card-side outline outline-1 outline-zinc-800">
-          <figure className="w-28 m-3">
+          <figure className="w-28 m-3 ">
             <img src={photo} alt="" width={50} height={50} />
           </figure>
           <div className="card-body bg-[#201F23] rounded-r-xl">
@@ -19,7 +19,7 @@ const CategoryCard = (props) => {
             </div>
             <div className="card-actions justify-start w-full mt-3">
               <Link to={`/categories/${_id}`}>
-                <button className="btn btn-outline btn-sm btn-warning">
+                <button className="btn btn-outline btn-sm text-white">
                   Explore →
                 </button>
               </Link>
