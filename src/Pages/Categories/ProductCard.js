@@ -65,7 +65,7 @@ const ProductCard = ({ product, setCamera }) => {
             </PhotoProvider>
           </figure>
           <div className="card-body bg-[#201F23] rounded-b-xl">
-            <h2 className="card-title">{name}</h2>
+            <h2 className="card-title text-2xl">{name}</h2>
             <p className="text-sm text-justify ">Location: {location}</p>
             <p className="text-sm text-justify ">
               Original Price: ৳ {originalPrice}
@@ -79,13 +79,15 @@ const ProductCard = ({ product, setCamera }) => {
                 <input
                   type="checkbox"
                   defaultChecked
-                  className="checkbox checkbox-xs checkbox- checked btn-disabled ml-1"
+                  className="checkbox checkbox-xs checkbox-info checked btn-disabled ml-1"
                 />
               </div>
             </div>
             <p className="text-sm text-justify">Posted on: {postTime}</p>
 
-            <div className="badge font-extrabold my-3 p-3">৳ {resalePrice}</div>
+            <div className="badge badge-success font-extrabold my-3 p-3">
+              ৳ {resalePrice}
+            </div>
 
             {/* The button to open modal */}
             <label
