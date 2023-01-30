@@ -6,14 +6,14 @@ const CategoryCard = (props) => {
   return (
     <div>
       <div className="m-5 w-96">
-        <div className="card card-side outline outline-1">
+        <div className="card card-side outline outline-1 outline-zinc-800">
           <figure className="w-28 m-3">
             <img src={photo} alt="" width={50} height={50} />
           </figure>
           <div className="card-body bg-[#201F23] rounded-r-xl">
             <h2 className="card-title">{title}</h2>
             <div className="card-actions justify-start">
-              <div className="badge badge-outline badge-error">
+              <div className="badge badge-outline badge-md text-zinc-500">
                 {products.length} products available
               </div>
             </div>
