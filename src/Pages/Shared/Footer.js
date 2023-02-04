@@ -59,16 +59,12 @@ const Footer = () => {
             <p>
               <small>Copyright © {year}</small>
             </p>
-            <p>
-              <img
-                className="h-4"
-                src="https://i.ibb.co/pQVYqBF/Asset-1.png"
-                alt=""
-              />
-              <span className="mt-9">
-                Buy excellent cameras in affordable price
-              </span>
-            </p>
+            <img
+              className="h-4"
+              src="https://i.ibb.co/pQVYqBF/Asset-1.png"
+              alt=""
+            />
+            <p>Buy excellent cameras in affordable price</p>
           </div>
           <div className="md:place-self-center md:justify-self-end">
             <div className="grid grid-flow-col gap-4">
