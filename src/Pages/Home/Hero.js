@@ -23,13 +23,15 @@ const Hero = () => {
             <div className="grid place-items-center h-[80vh] text-white">
               {/* <Banner></Banner> */}
               <div className="px-9 lg:pl-24">
-                <h1 className="text-4xl font-bold">
+                <h1 className="text-5xl font-bold mb-4">
                   Capturing life's moments is important!
-                  <br /> Offering high-quality cameras to meet your needs.
+                </h1>
+                <h1 className="text-5xl font-bold mt-4">
+                  Offering high-quality cameras to meet your needs.
                 </h1>
 
                 <Link to="/categories">
-                  <button className="btn btn-warning mt-6">
+                  <button className="btn btn-warning mt-9">
                     Explore <span className="ml-2 animate-oscillation">→</span>
                   </button>
                 </Link>
