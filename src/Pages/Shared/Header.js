@@ -61,7 +61,12 @@ const Header = () => {
               isHome ? 'white' : 'primary'
             }`}
           >
-            Recycle Mart
+            {/* Recycle Mart */}
+            <img
+              className="h-6"
+              src="https://i.ibb.co/pQVYqBF/Asset-1.png"
+              alt=""
+            />
           </Link>
         </div>
         <div
