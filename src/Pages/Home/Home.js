@@ -13,7 +13,7 @@ const Home = () => {
       <h1 className="text-5xl font-bold mt-12">Categories</h1>
       <Categories></Categories>
       <Link to="/categories">
-        <button className="btn btn-primary mb-16">See All →</button>
+        <button className="btn btn-warning mb-16">See All →</button>
       </Link>
       <Featured></Featured>
       <MobileApp></MobileApp>

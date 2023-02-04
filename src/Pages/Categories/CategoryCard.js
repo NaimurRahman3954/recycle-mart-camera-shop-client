@@ -19,7 +19,7 @@ const CategoryCard = (props) => {
             </div>
             <div className="card-actions justify-start w-full mt-3">
               <Link to={`/categories/${_id}`}>
-                <button className="btn btn-outline btn-md btn-primary">
+                <button className="btn btn-outline btn-sm btn-primary">
                   Explore →
                 </button>
               </Link>
