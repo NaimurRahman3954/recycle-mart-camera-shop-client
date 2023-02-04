@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Banner from './Banner'
 import React from 'react'
 import Categories from '../Categories/Categories'
 import Request from './Request'
@@ -11,7 +10,6 @@ const Home = () => {
   return (
     <div className="App">
       <Hero></Hero>
-      <Banner></Banner>
       <h1 className="text-5xl font-bold mt-12">Categories</h1>
       <Categories></Categories>
       <Link to="/categories">
