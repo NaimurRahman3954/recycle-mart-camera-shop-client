@@ -42,12 +42,12 @@ const Header = () => {
       </li>
       {/* Buyer or Seller */}
 
-      <div className="grid place-items-start lg:place-items-center mb-2 lg:mb-0">
+      {/* <div className="grid place-items-start lg:place-items-center mb-2 lg:mb-0">
         <select className="select select-bordered select-sm mx-2 mr-4">
           <option defaultValue>Buyer</option>
           <option>Seller</option>
         </select>
-      </div>
+      </div> */}
     </>
   )
 
