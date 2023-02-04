@@ -60,8 +60,12 @@ const Footer = () => {
               <small>Copyright © {year}</small>
             </p>
             <p>
-              <span className="font-bold text-primary">Recycle Mart</span>
-              <span className="m-0 lg:ml-2 block lg:inline">
+              <img
+                className="h-4"
+                src="https://i.ibb.co/pQVYqBF/Asset-1.png"
+                alt=""
+              />
+              <span className="mt-9">
                 Buy excellent cameras in affordable price
               </span>
             </p>
