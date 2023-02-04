@@ -1,5 +1,6 @@
 // import { useQuery } from '@tanstack/react-query'
 import React, { useEffect, useState } from 'react'
+import Banner from '../Home/Banner'
 import CategoryCard from './CategoryCard'
 
 const Categories = () => {
@@ -29,6 +30,7 @@ const Categories = () => {
 
   return (
     <div className="container mx-auto my-10 text-center">
+      {/* <Banner></Banner> */}
       <>
         {loading ? (
           <button className="btn loading bg-primary my-16">loading</button>
