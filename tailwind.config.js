@@ -2,7 +2,17 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        oscillation: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(5px)' },
+        },
+      },
+      animation: {
+        oscillation: 'oscillation 1.5s ease-in-out infinite',
+      },
+    },
   },
   plugins: [require('daisyui')],
 

@@ -29,7 +29,9 @@ const Hero = () => {
                 </h1>
 
                 <Link to="/categories">
-                  <button className="btn btn-warning mt-6">Explore</button>
+                  <button className="btn btn-warning mt-6">
+                    Explore <span className="ml-2 animate-oscillation">→</span>
+                  </button>
                 </Link>
               </div>
             </div>
