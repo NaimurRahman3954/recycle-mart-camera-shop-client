@@ -23,13 +23,13 @@ const Hero = () => {
             <div className="grid place-items-center h-[80vh] text-white">
               {/* <Banner></Banner> */}
               <div className="px-9 lg:pl-24">
-                <h1 className="text-5xl font-bold">DSLR Camera</h1>
-                <p className="py-6">
-                  Discover a wide range of DSLR Cameras including Canon, Nikon,
-                  Sony at best price in Bangladesh.
-                </p>
+                <h1 className="text-4xl font-bold">
+                  Capturing life's moments is important!
+                  <br /> Offering high-quality cameras to meet your needs.
+                </h1>
+
                 <Link to="/categories">
-                  <button className="btn btn-warning">Explore</button>
+                  <button className="btn btn-warning mt-6">Explore</button>
                 </Link>
               </div>
             </div>

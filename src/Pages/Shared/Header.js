@@ -57,7 +57,7 @@ const Header = () => {
         <div className="navbar-start">
           <Link
             to="/"
-            className={`btn btn-ghost normal-case text-xl font-bold text-${
+            className={`btn btn-ghost normal-case text-xl font-bold font-mono text-${
               isHome ? 'white' : 'primary'
             }`}
           >
@@ -83,7 +83,7 @@ const Header = () => {
           {!user?.uid && (
             <div className="flex justify-center gap-4">
               <Link
-                className={`btn btn-sm btn-outline mx-1 text-${
+                className={`btn btn-sm btn-outline btn-warning mx-1 text-${
                   isHome ? 'white' : 'black'
                 }`}
                 to="/login"
