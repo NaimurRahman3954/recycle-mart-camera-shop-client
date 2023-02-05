@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Header from '../Shared/Header'
 import Banner from './Banner'
 
@@ -20,7 +21,17 @@ const Hero = () => {
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75">
             <Header></Header>
             <div className="grid place-items-center h-[80vh] text-white">
-              <Banner></Banner>
+              {/* <Banner></Banner> */}
+              <div className="px-9 lg:pl-24">
+                <h1 className="text-5xl font-bold">DSLR Camera</h1>
+                <p className="py-6">
+                  Discover a wide range of DSLR Cameras including Canon, Nikon,
+                  Sony at best price in Bangladesh.
+                </p>
+                <Link to="/categories">
+                  <button className="btn btn-warning">Explore</button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

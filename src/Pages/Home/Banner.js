@@ -8,7 +8,7 @@ const Banner = () => {
         <div id="slide1" className="carousel-item relative w-full">
           <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              // src="https://i.ibb.co/b1337KS/1-dslr.png"
+              src="https://i.ibb.co/b1337KS/1-dslr.png"
               className=" max-w-sm mr-0 lg:mr-16"
               alt=""
             />
@@ -19,7 +19,7 @@ const Banner = () => {
                 Sony at best price in Bangladesh.
               </p>
               <Link to="/categories">
-                <button className="btn btn-warning">Explore</button>
+                <button className="btn btn-primary">Explore</button>
               </Link>
             </div>
           </div>
@@ -36,7 +36,7 @@ const Banner = () => {
         <div id="slide2" className="carousel-item relative w-full">
           <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              // src="https://i.ibb.co/XJpPVmZ/2-mirrorless.png"
+              src="https://i.ibb.co/XJpPVmZ/2-mirrorless.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
@@ -48,7 +48,7 @@ const Banner = () => {
                 and more.
               </p>
               <Link to="/categories">
-                <button className="btn btn-warning">Explore</button>
+                <button className="btn btn-primary">Explore</button>
               </Link>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Banner = () => {
         <div id="slide3" className="carousel-item relative w-full">
           <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              // src="https://i.ibb.co/VSF4wGR/3-polaroid.png"
+              src="https://i.ibb.co/VSF4wGR/3-polaroid.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
@@ -76,7 +76,7 @@ const Banner = () => {
                 Price. ✓EMI Installment.
               </p>
               <Link to="/categories">
-                <button className="btn btn-warning">Explore</button>
+                <button className="btn btn-primary">Explore</button>
               </Link>
             </div>
           </div>
@@ -92,7 +92,7 @@ const Banner = () => {
         <div id="slide4" className="carousel-item relative w-full">
           <div className="hero-content mx-auto flex-col lg:flex-row-reverse">
             <img
-              // src="https://i.ibb.co/5WS3nSp/4-movie-camera.png"
+              src="https://i.ibb.co/5WS3nSp/4-movie-camera.png"
               className=" max-w-sm  mr-0 lg:mr-16"
               alt=""
             />
@@ -104,7 +104,7 @@ const Banner = () => {
                 Design URSA Mini Pro G2
               </p>
               <Link to="/categories">
-                <button className="btn btn-warning">Explore</button>
+                <button className="btn btn-primary">Explore</button>
               </Link>
             </div>
           </div>
