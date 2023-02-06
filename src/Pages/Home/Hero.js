@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../Shared/Header'
+import Banner from './Banner'
 
 const Hero = () => {
   return (
@@ -18,6 +19,9 @@ const Hero = () => {
           {/* <div className="basis-1/2"></div> */}
           <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75">
             <Header></Header>
+            <div className="grid place-items-center h-[80vh] text-white">
+              <Banner></Banner>
+            </div>
           </div>
         </div>
       </div>
