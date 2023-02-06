@@ -73,7 +73,7 @@ const Header = () => {
         >
           <ul
             className={`menu menu-horizontal p-0 text-${
-              isHome ? 'white' : 'primary'
+              isHome ? 'white' : 'black'
             }`}
           >
             {menuItems}
