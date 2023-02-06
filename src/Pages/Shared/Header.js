@@ -1,10 +1,13 @@
 import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/Usercontext'
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext)
   console.log('context', user)
+
+  const location = useLocation()
+  const isHome = location.pathname === '/'
 
   const handleSignOut = () => {
     logOut()
@@ -34,7 +37,7 @@ const Header = () => {
 
   const privateMenuItems = (
     <>
-      <li>
+      <li className={`text-${isHome ? 'white' : 'black'}`}>
         <Link to="/dashboard">Dashboard</Link>
       </li>
       {/* Buyer or Seller */}
@@ -66,7 +69,7 @@ const Header = () => {
               : 'navbar-center hidden lg:flex'
           }
         >
-          <ul className="menu menu-horizontal p-0 text-white,">{menuItems}</ul>
+          <ul className="menu menu-horizontal p-0 text-white">{menuItems}</ul>
         </div>
         <div className="navbar-end">
           {!user?.uid && (
