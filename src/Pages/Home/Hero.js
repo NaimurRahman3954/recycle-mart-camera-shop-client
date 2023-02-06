@@ -15,6 +15,7 @@ const Hero = () => {
       <div className="container mx-auto my-16">
         <div className="flex flex-wrap justify-center lg:mx-16">
           {/* <div className="basis-1/2"></div> */}
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75"></div>
         </div>
       </div>
     </div>
