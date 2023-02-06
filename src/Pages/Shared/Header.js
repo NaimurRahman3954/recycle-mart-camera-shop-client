@@ -77,7 +77,9 @@ const Header = () => {
           {!user?.uid && (
             <div className="flex justify-center gap-4">
               <Link
-                className="btn btn-sm btn-outline text-white mx-1"
+                className={`btn btn-sm btn-outline mx-1 text-${
+                  isHome ? 'white' : 'black'
+                }`}
                 to="/login"
               >
                 Login
