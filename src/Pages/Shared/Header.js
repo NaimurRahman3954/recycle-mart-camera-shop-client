@@ -57,7 +57,9 @@ const Header = () => {
         <div className="navbar-start">
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-xl font-bold text-white"
+            className={`btn btn-ghost normal-case text-xl font-bold text-${
+              isHome ? 'white' : 'primary'
+            }`}
           >
             Recycle Mart
           </Link>
