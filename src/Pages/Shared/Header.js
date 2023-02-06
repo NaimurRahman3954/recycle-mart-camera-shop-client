@@ -54,7 +54,7 @@ const Header = () => {
         <div className="navbar-start">
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-xl font-bold text-primary"
+            className="btn btn-ghost normal-case text-xl font-bold text-white"
           >
             Recycle Mart
           </Link>
@@ -66,7 +66,7 @@ const Header = () => {
               : 'navbar-center hidden lg:flex'
           }
         >
-          <ul className="menu menu-horizontal p-0">{menuItems}</ul>
+          <ul className="menu menu-horizontal p-0 text-white,">{menuItems}</ul>
         </div>
         <div className="navbar-end">
           {!user?.uid && (
