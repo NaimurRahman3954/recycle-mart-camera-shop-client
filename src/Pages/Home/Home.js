@@ -5,10 +5,12 @@ import Categories from '../Categories/Categories'
 import Request from './Request'
 import Featured from './Featured'
 import MobileApp from './MobileApp'
+import Hero from './Hero'
 
 const Home = () => {
   return (
     <div className="App">
+      <Hero></Hero>
       <Banner></Banner>
       <h1 className="text-5xl font-bold mt-12">Categories</h1>
       <Categories></Categories>
