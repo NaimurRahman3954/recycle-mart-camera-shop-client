@@ -5,7 +5,7 @@ const Hero = () => {
     <div
       className="pb-6 pt-1 -mt-20 h-screen"
       style={{
-        backgroundImage: `url(https://i.ibb.co/vY6f8pf/background.jpg)`,
+        backgroundImage: `url(https://i.ibb.co/C1YFsW2/best-low-light-photography-202108-medium.jpg)`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
