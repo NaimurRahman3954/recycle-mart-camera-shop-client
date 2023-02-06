@@ -9,6 +9,7 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
+        //   backdropFilter: 'blur(10px)',
       }}
     >
       <div className="container mx-auto my-16">
