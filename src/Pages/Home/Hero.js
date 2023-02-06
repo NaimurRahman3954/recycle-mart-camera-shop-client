@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../Shared/Header'
 
 const Hero = () => {
   return (
@@ -9,13 +10,15 @@ const Hero = () => {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
-        //   backdropFilter: 'blur(10px)',
+        backdropFilter: '',
       }}
     >
       <div className="container mx-auto my-16">
         <div className="flex flex-wrap justify-center lg:mx-16">
           {/* <div className="basis-1/2"></div> */}
-          <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75"></div>
+          <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-75">
+            <Header></Header>
+          </div>
         </div>
       </div>
     </div>

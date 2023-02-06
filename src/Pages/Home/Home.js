@@ -6,7 +6,6 @@ import Request from './Request'
 import Featured from './Featured'
 import MobileApp from './MobileApp'
 import Hero from './Hero'
-import Header from '../Shared/Header'
 
 const Home = () => {
   return (
