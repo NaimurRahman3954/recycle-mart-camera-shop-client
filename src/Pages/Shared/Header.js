@@ -71,7 +71,10 @@ const Header = () => {
         <div className="navbar-end">
           {!user?.uid && (
             <div className="flex justify-center gap-4">
-              <Link className="btn btn-outline btn-primary mx-1" to="/login">
+              <Link
+                className="btn btn-sm btn-outline text-white mx-1"
+                to="/login"
+              >
                 Login
               </Link>
             </div>
