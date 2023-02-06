@@ -1,7 +1,5 @@
 # Recycle Mart
 
-<!-- 📌📌 update the live site link  -->
-
 Watch the [Live Site](https://developers-portal-d26e9.web.app/).
 
 ## Features
