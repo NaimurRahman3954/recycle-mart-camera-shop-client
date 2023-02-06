@@ -71,7 +71,13 @@ const Header = () => {
               : 'navbar-center hidden lg:flex'
           }
         >
-          <ul className="menu menu-horizontal p-0 text-white">{menuItems}</ul>
+          <ul
+            className={`menu menu-horizontal p-0 text-${
+              isHome ? 'white' : 'primary'
+            }`}
+          >
+            {menuItems}
+          </ul>
         </div>
         <div className="navbar-end">
           {!user?.uid && (
